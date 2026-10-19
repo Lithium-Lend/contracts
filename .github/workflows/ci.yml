@@ -1,0 +1,58 @@
+name: Contracts
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: contracts-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  token:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+        with:
+          version: v1.8.0
+      - run: forge fmt --check
+      - run: forge build --sizes
+      - run: forge test -vvv
+
+  comet:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: comet
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+        with:
+          version: v1.8.0
+      - name: Verify Comet dependency pin
+        working-directory: .
+        run: test "$(git -C lib/comet rev-parse HEAD)" = "f766f51583c23acc33b2a7824654ef2029a96804"
+      - name: Build cross-compiler test asset
+        working-directory: .
+        run: forge build src/testnet/LithiumUSDC.sol
+      - run: forge lint --color never
+      - run: forge fmt --check
+      - run: forge build --sizes --skip test --skip script
+      - run: node script/verify-liteforge.mjs --check
+      - run: forge test -vvv
+      - name: Verify upstream files are unchanged
+        working-directory: .
+        run: test -z "$(git -C lib/comet status --porcelain)"

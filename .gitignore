@@ -1,0 +1,11 @@
+/broadcast/
+/cache/
+/out/
+/comet/broadcast/
+/comet/cache/
+/comet/cache-liteforge/
+/comet/out/
+/comet/out-liteforge/
+*.env
+.env.*
+!.env.example
