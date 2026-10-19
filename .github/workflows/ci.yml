@@ -56,3 +56,14 @@ jobs:
       - name: Verify upstream files are unchanged
         working-directory: .
         run: test -z "$(git -C lib/comet status --porcelain)"
+
+  validate:
+    if: always()
+    needs: [token, comet]
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Require contract jobs
+        env:
+          TOKEN_RESULT: ${{ needs.token.result }}
+          COMET_RESULT: ${{ needs.comet.result }}
+        run: test "$TOKEN_RESULT" = success && test "$COMET_RESULT" = success
