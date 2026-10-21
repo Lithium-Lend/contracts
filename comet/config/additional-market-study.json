@@ -1,0 +1,69 @@
+{
+  "purpose": "Deterministic comparison for separate LiteForge markets before deployment. No probability model or mainnet calibration.",
+  "referencePriceUsd": "100",
+  "riskPairs": [
+    {
+      "id": "50-65",
+      "borrowBps": 5000,
+      "liquidateBps": 6500
+    },
+    {
+      "id": "60-70",
+      "borrowBps": 6000,
+      "liquidateBps": 7000
+    },
+    {
+      "id": "65-75",
+      "borrowBps": 6500,
+      "liquidateBps": 7500
+    }
+  ],
+  "liquidationFactorBps": 9000,
+  "storefrontFactorBps": 6000,
+  "curves": [
+    {
+      "id": "reference-90",
+      "kink": "900000000000000000",
+      "supplyBase": "0",
+      "supplyLow": "35999999986896000",
+      "supplyHigh": "3195999999996480000",
+      "borrowBase": "36000000000000000",
+      "borrowLow": "27777999977136000",
+      "borrowHigh": "3599999999982576000",
+      "minRetainedBps": 0
+    },
+    {
+      "id": "reserve-buffer-90",
+      "kink": "900000000000000000",
+      "supplyBase": "0",
+      "supplyLow": "32399999959824000",
+      "supplyHigh": "3195999999996480000",
+      "borrowBase": "36000000000000000",
+      "borrowLow": "27777999977136000",
+      "borrowHigh": "3599999999982576000",
+      "minRetainedBps": 1000
+    },
+    {
+      "id": "preserve-supply-90",
+      "kink": "900000000000000000",
+      "supplyBase": "0",
+      "supplyLow": "35999999986896000",
+      "supplyHigh": "3195999999996480000",
+      "borrowBase": "40000000000000000",
+      "borrowLow": "27777999977136000",
+      "borrowHigh": "3599999999982576000",
+      "minRetainedBps": 1000
+    },
+    {
+      "id": "earlier-kink-80",
+      "kink": "800000000000000000",
+      "supplyBase": "0",
+      "supplyLow": "32399999959824000",
+      "supplyHigh": "900000000000000000",
+      "borrowBase": "36000000000000000",
+      "borrowLow": "31250000000000000",
+      "borrowHigh": "1000000000000000000",
+      "minRetainedBps": 1000
+    }
+  ]
+}

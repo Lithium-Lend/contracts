@@ -1,0 +1,702 @@
+{
+  "accrual": [
+    {
+      "curve": 0,
+      "decimals": 6,
+      "utilizationBps": 1000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1003670572",
+      "debt": "103958855",
+      "reserves": "288283"
+    },
+    {
+      "curve": 0,
+      "decimals": 6,
+      "utilizationBps": 1000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1003599999",
+      "debt": "103877779",
+      "reserves": "277780"
+    },
+    {
+      "curve": 0,
+      "decimals": 6,
+      "utilizationBps": 9000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1082629857",
+      "debt": "1008601691",
+      "reserves": "25971834"
+    },
+    {
+      "curve": 0,
+      "decimals": 6,
+      "utilizationBps": 9000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1032399999",
+      "debt": "954900179",
+      "reserves": "22500180"
+    },
+    {
+      "curve": 0,
+      "decimals": 6,
+      "utilizationBps": 10000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1618774709",
+      "debt": "1762930062",
+      "reserves": "144155353"
+    },
+    {
+      "curve": 0,
+      "decimals": 6,
+      "utilizationBps": 10000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1351999999",
+      "debt": "1421000199",
+      "reserves": "69000200"
+    },
+    {
+      "curve": 0,
+      "decimals": 18,
+      "utilizationBps": 1000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1003670572660496000000",
+      "debt": "103958855899659600000",
+      "reserves": "288283239163600000"
+    },
+    {
+      "curve": 0,
+      "decimals": 18,
+      "utilizationBps": 1000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1003599999995536000000",
+      "debt": "103877779998145600000",
+      "reserves": "277780002609600000"
+    },
+    {
+      "curve": 0,
+      "decimals": 18,
+      "utilizationBps": 9000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1082629857856764000000",
+      "debt": "1008601691946578100000",
+      "reserves": "25971834089814100000"
+    },
+    {
+      "curve": 0,
+      "decimals": 18,
+      "utilizationBps": 9000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1032399999959824000000",
+      "debt": "954900179944142400000",
+      "reserves": "22500179984318400000"
+    },
+    {
+      "curve": 0,
+      "decimals": 18,
+      "utilizationBps": 10000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1618774709545434000000",
+      "debt": "1762930062811478000000",
+      "reserves": "144155353266044000000"
+    },
+    {
+      "curve": 0,
+      "decimals": 18,
+      "utilizationBps": 10000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1351999999959472000000",
+      "debt": "1421000199933040000000",
+      "reserves": "69000199973568000000"
+    },
+    {
+      "curve": 1,
+      "decimals": 6,
+      "utilizationBps": 1000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1003303515",
+      "debt": "103958909",
+      "reserves": "655394"
+    },
+    {
+      "curve": 1,
+      "decimals": 6,
+      "utilizationBps": 1000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1003239999",
+      "debt": "103877779",
+      "reserves": "637780"
+    },
+    {
+      "curve": 1,
+      "decimals": 6,
+      "utilizationBps": 9000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1084966971",
+      "debt": "1014749735",
+      "reserves": "29782764"
+    },
+    {
+      "curve": 1,
+      "decimals": 6,
+      "utilizationBps": 9000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1029159999",
+      "debt": "954900179",
+      "reserves": "25740180"
+    },
+    {
+      "curve": 1,
+      "decimals": 6,
+      "utilizationBps": 10000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1623727747",
+      "debt": "1775463295",
+      "reserves": "151735548"
+    },
+    {
+      "curve": 1,
+      "decimals": 6,
+      "utilizationBps": 10000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1348759999",
+      "debt": "1421000199",
+      "reserves": "72240200"
+    },
+    {
+      "curve": 1,
+      "decimals": 18,
+      "utilizationBps": 1000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1003303515955716000000",
+      "debt": "103958909584827300000",
+      "reserves": "655393629111300000"
+    },
+    {
+      "curve": 1,
+      "decimals": 18,
+      "utilizationBps": 1000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1003239999967600000000",
+      "debt": "103877779998145600000",
+      "reserves": "637780030545600000"
+    },
+    {
+      "curve": 1,
+      "decimals": 18,
+      "utilizationBps": 9000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1084966971870455000000",
+      "debt": "1014749735775008400000",
+      "reserves": "29782763904553400000"
+    },
+    {
+      "curve": 1,
+      "decimals": 18,
+      "utilizationBps": 9000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1029159999960688000000",
+      "debt": "954900179944142400000",
+      "reserves": "25740179983454400000"
+    },
+    {
+      "curve": 1,
+      "decimals": 18,
+      "utilizationBps": 10000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1623727747362791000000",
+      "debt": "1775463295007856000000",
+      "reserves": "151735547645065000000"
+    },
+    {
+      "curve": 1,
+      "decimals": 18,
+      "utilizationBps": 10000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1348759999960336000000",
+      "debt": "1421000199933040000000",
+      "reserves": "72240199972704000000"
+    },
+    {
+      "curve": 2,
+      "decimals": 6,
+      "utilizationBps": 1000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1003677957",
+      "debt": "104376069",
+      "reserves": "698112"
+    },
+    {
+      "curve": 2,
+      "decimals": 6,
+      "utilizationBps": 1000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1003599999",
+      "debt": "104277779",
+      "reserves": "677780"
+    },
+    {
+      "curve": 2,
+      "decimals": 6,
+      "utilizationBps": 9000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1089867281",
+      "debt": "1020270523",
+      "reserves": "30403242"
+    },
+    {
+      "curve": 2,
+      "decimals": 6,
+      "utilizationBps": 9000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1032399999",
+      "debt": "958500179",
+      "reserves": "26100180"
+    },
+    {
+      "curve": 2,
+      "decimals": 6,
+      "utilizationBps": 10000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1631396976",
+      "debt": "1785534301",
+      "reserves": "154137325"
+    },
+    {
+      "curve": 2,
+      "decimals": 6,
+      "utilizationBps": 10000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1351999999",
+      "debt": "1425000199",
+      "reserves": "73000200"
+    },
+    {
+      "curve": 2,
+      "decimals": 18,
+      "utilizationBps": 1000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1003677957176886000000",
+      "debt": "104376069899483300000",
+      "reserves": "698112722597300000"
+    },
+    {
+      "curve": 2,
+      "decimals": 18,
+      "utilizationBps": 1000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1003599999995536000000",
+      "debt": "104277779998350400000",
+      "reserves": "677780002814400000"
+    },
+    {
+      "curve": 2,
+      "decimals": 18,
+      "utilizationBps": 9000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1089867281568215000000",
+      "debt": "1020270523447516500000",
+      "reserves": "30403241879301500000"
+    },
+    {
+      "curve": 2,
+      "decimals": 18,
+      "utilizationBps": 9000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1032399999959824000000",
+      "debt": "958500179945985600000",
+      "reserves": "26100179986161600000"
+    },
+    {
+      "curve": 2,
+      "decimals": 18,
+      "utilizationBps": 10000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1631396975955766000000",
+      "debt": "1785534300972594000000",
+      "reserves": "154137325016828000000"
+    },
+    {
+      "curve": 2,
+      "decimals": 18,
+      "utilizationBps": 10000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1351999999959472000000",
+      "debt": "1425000199935088000000",
+      "reserves": "73000199975616000000"
+    },
+    {
+      "curve": 3,
+      "decimals": 6,
+      "utilizationBps": 1000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1003304099",
+      "debt": "103995712",
+      "reserves": "691613"
+    },
+    {
+      "curve": 3,
+      "decimals": 6,
+      "utilizationBps": 1000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1003239999",
+      "debt": "103912499",
+      "reserves": "672500"
+    },
+    {
+      "curve": 3,
+      "decimals": 6,
+      "utilizationBps": 9000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1144482100",
+      "debt": "1079792238",
+      "reserves": "35310138"
+    },
+    {
+      "curve": 3,
+      "decimals": 6,
+      "utilizationBps": 9000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1115919999",
+      "debt": "1044899999",
+      "reserves": "28980000"
+    },
+    {
+      "curve": 3,
+      "decimals": 6,
+      "utilizationBps": 10000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1260986008",
+      "debt": "1336195884",
+      "reserves": "75209876"
+    },
+    {
+      "curve": 3,
+      "decimals": 6,
+      "utilizationBps": 10000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1205919999",
+      "debt": "1260999999",
+      "reserves": "55080000"
+    },
+    {
+      "curve": 3,
+      "decimals": 18,
+      "utilizationBps": 1000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1003304099070338000000",
+      "debt": "103995712072889100000",
+      "reserves": "691613002551100000"
+    },
+    {
+      "curve": 3,
+      "decimals": 18,
+      "utilizationBps": 1000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1003239999967600000000",
+      "debt": "103912499995696000000",
+      "reserves": "672500028096000000"
+    },
+    {
+      "curve": 3,
+      "decimals": 18,
+      "utilizationBps": 9000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1144482100851436000000",
+      "debt": "1079792238912121800000",
+      "reserves": "35310138060685800000"
+    },
+    {
+      "curve": 3,
+      "decimals": 18,
+      "utilizationBps": 9000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1115919999944560000000",
+      "debt": "1044899999960659200000",
+      "reserves": "28980000016099200000"
+    },
+    {
+      "curve": 3,
+      "decimals": 18,
+      "utilizationBps": 10000,
+      "intervalDays": 1,
+      "days": 365,
+      "supply": "1260986008131498000000",
+      "debt": "1336195884322354000000",
+      "reserves": "75209876190856000000"
+    },
+    {
+      "curve": 3,
+      "decimals": 18,
+      "utilizationBps": 10000,
+      "intervalDays": 365,
+      "days": 365,
+      "supply": "1205919999959104000000",
+      "debt": "1260999999944416000000",
+      "reserves": "55079999985312000000"
+    }
+  ],
+  "liquidation": [
+    {
+      "pair": 0,
+      "native": false,
+      "collateralBps": 7000,
+      "baseBps": 10000,
+      "liquidatable": true,
+      "debt": "504036988",
+      "charge": "630000000",
+      "credit": "125963012",
+      "proceeds": "658000000",
+      "delta": "28000000"
+    },
+    {
+      "pair": 0,
+      "native": false,
+      "collateralBps": 5000,
+      "baseBps": 10000,
+      "liquidatable": true,
+      "debt": "504036988",
+      "charge": "504036988",
+      "credit": "0",
+      "proceeds": "470000000",
+      "delta": "-34036988"
+    },
+    {
+      "pair": 0,
+      "native": false,
+      "collateralBps": 7000,
+      "baseBps": 10500,
+      "liquidatable": true,
+      "debt": "504036988",
+      "charge": "600000000",
+      "credit": "95963012",
+      "proceeds": "626666666",
+      "delta": "26666666"
+    },
+    {
+      "pair": 0,
+      "native": true,
+      "collateralBps": 10000,
+      "baseBps": 15000,
+      "liquidatable": true,
+      "debt": "5040369882185360000",
+      "charge": "6000000000000000000",
+      "credit": "959630117814640000",
+      "proceeds": "6266666666666666666",
+      "delta": "266666666666666666"
+    },
+    {
+      "pair": 0,
+      "native": true,
+      "collateralBps": 10000,
+      "baseBps": 20000,
+      "liquidatable": true,
+      "debt": "5040369882185360000",
+      "charge": "5040369882185360000",
+      "credit": "0",
+      "proceeds": "4700000000000000000",
+      "delta": "-340369882185360000"
+    },
+    {
+      "pair": 0,
+      "native": true,
+      "collateralBps": 9000,
+      "baseBps": 12000,
+      "liquidatable": true,
+      "debt": "5040369882185360000",
+      "charge": "6750000000000000000",
+      "credit": "1709630117814640000",
+      "proceeds": "7050000000000000000",
+      "delta": "300000000000000000"
+    },
+    {
+      "pair": 1,
+      "native": false,
+      "collateralBps": 7000,
+      "baseBps": 10000,
+      "liquidatable": true,
+      "debt": "604844385",
+      "charge": "630000000",
+      "credit": "25155615",
+      "proceeds": "658000000",
+      "delta": "28000000"
+    },
+    {
+      "pair": 1,
+      "native": false,
+      "collateralBps": 5000,
+      "baseBps": 10000,
+      "liquidatable": true,
+      "debt": "604844385",
+      "charge": "604844385",
+      "credit": "0",
+      "proceeds": "470000000",
+      "delta": "-134844385"
+    },
+    {
+      "pair": 1,
+      "native": false,
+      "collateralBps": 7000,
+      "baseBps": 10500,
+      "liquidatable": true,
+      "debt": "604844385",
+      "charge": "604844385",
+      "credit": "0",
+      "proceeds": "626666666",
+      "delta": "21822281"
+    },
+    {
+      "pair": 1,
+      "native": true,
+      "collateralBps": 10000,
+      "baseBps": 15000,
+      "liquidatable": true,
+      "debt": "6048443858622432000",
+      "charge": "6048443858622432000",
+      "credit": "0",
+      "proceeds": "6266666666666666666",
+      "delta": "218222808044234666"
+    },
+    {
+      "pair": 1,
+      "native": true,
+      "collateralBps": 10000,
+      "baseBps": 20000,
+      "liquidatable": true,
+      "debt": "6048443858622432000",
+      "charge": "6048443858622432000",
+      "credit": "0",
+      "proceeds": "4700000000000000000",
+      "delta": "-1348443858622432000"
+    },
+    {
+      "pair": 1,
+      "native": true,
+      "collateralBps": 9000,
+      "baseBps": 12000,
+      "liquidatable": true,
+      "debt": "6048443858622432000",
+      "charge": "6750000000000000000",
+      "credit": "701556141377568000",
+      "proceeds": "7050000000000000000",
+      "delta": "300000000000000000"
+    },
+    {
+      "pair": 2,
+      "native": false,
+      "collateralBps": 7000,
+      "baseBps": 10000,
+      "liquidatable": true,
+      "debt": "655248084",
+      "charge": "655248084",
+      "credit": "0",
+      "proceeds": "658000000",
+      "delta": "2751916"
+    },
+    {
+      "pair": 2,
+      "native": false,
+      "collateralBps": 5000,
+      "baseBps": 10000,
+      "liquidatable": true,
+      "debt": "655248084",
+      "charge": "655248084",
+      "credit": "0",
+      "proceeds": "470000000",
+      "delta": "-185248084"
+    },
+    {
+      "pair": 2,
+      "native": false,
+      "collateralBps": 7000,
+      "baseBps": 10500,
+      "liquidatable": true,
+      "debt": "655248084",
+      "charge": "655248084",
+      "credit": "0",
+      "proceeds": "626666666",
+      "delta": "-28581418"
+    },
+    {
+      "pair": 2,
+      "native": true,
+      "collateralBps": 10000,
+      "baseBps": 15000,
+      "liquidatable": true,
+      "debt": "6552480846840968000",
+      "charge": "6552480846840968000",
+      "credit": "0",
+      "proceeds": "6266666666666666666",
+      "delta": "-285814180174301334"
+    },
+    {
+      "pair": 2,
+      "native": true,
+      "collateralBps": 10000,
+      "baseBps": 20000,
+      "liquidatable": true,
+      "debt": "6552480846840968000",
+      "charge": "6552480846840968000",
+      "credit": "0",
+      "proceeds": "4700000000000000000",
+      "delta": "-1852480846840968000"
+    },
+    {
+      "pair": 2,
+      "native": true,
+      "collateralBps": 9000,
+      "baseBps": 12000,
+      "liquidatable": true,
+      "debt": "6552480846840968000",
+      "charge": "6750000000000000000",
+      "credit": "197519153159032000",
+      "proceeds": "7050000000000000000",
+      "delta": "300000000000000000"
+    }
+  ]
+}

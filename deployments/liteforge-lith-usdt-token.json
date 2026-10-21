@@ -1,0 +1,28 @@
+{
+  "network": "LitVM LiteForge",
+  "chainId": 4441,
+  "status": "deployed-and-configuration-checked",
+  "sourceVerification": "verified-on-blockscout",
+  "checkedAt": "2026-10-21T09:44:45.970Z",
+  "transactions": [
+    {
+      "name": "LithiumUSDT",
+      "address": "0xb341d9bce2c1cee5ed2cd8b26d0f9eb420272a39",
+      "transactionHash": "0xf0df284c0b5b7b7aa98bf9757cd7abc08d425e3e9adafc1c1c5acf6ae02a9414",
+      "blockNumber": 63167717,
+      "runtimeCodeHash": "0xcba0b03a0cc8f716ccb95393767764b7f2916c9ef51f50334aef4b02a1d3c17e",
+      "contract": "src/testnet/LithiumUSDT.sol:LithiumUSDT",
+      "constructorArgs": "0x0000000000000000000000004f8705f8fb406fa933433efe409bba16be5c069b",
+      "sourceVerification": "verified-on-blockscout",
+      "sourceVerifiedAt": "2026-10-21T09:59:31.873545Z",
+      "explorerConstructorArgumentsAvailable": true
+    }
+  ],
+  "gasCostWei": "7266320000000",
+  "sourceSha256": {
+    "src/testnet/LithiumUSDT.sol": "069aedcaf0f34e8d9a8d3926efed1fa55b5b08dd4817afe13528b5f7b534bf66"
+  },
+  "token": "0xb341d9bce2c1cee5ed2cd8b26d0f9eb420272a39",
+  "sourceVerifiedAt": "2026-10-21T11:42:17.585Z",
+  "sourceVerificationCheckedAt": "2026-10-21T11:42:17.585Z"
+}

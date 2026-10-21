@@ -1,0 +1,29 @@
+{
+  "chainId": 4441,
+  "rpcUrl": "https://liteforge.rpc.caldera.xyz/http",
+  "nativeCurrency": "zkLTC",
+  "baseAsset": {
+    "symbol": "USDC",
+    "address": "0x5adf1045C4a7C3e2176DbCbD09a7E6D1b0f75cfB",
+    "decimals": 6,
+    "kind": "bridged-testnet-token",
+    "parentToken": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+    "l2Gateway": "0x80ccB8763A410C39725c15D0C12dE61182AD6f82"
+  },
+  "collateralAsset": {
+    "symbol": "zkLTC",
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "kind": "native"
+  },
+  "priceSources": {
+    "USDC_USD": "0x4f91a950ed73c8B6F28dFE460f9444ed8866894f",
+    "LTC_USD": "0x45dDa5d881BD2C917976CCfde74fFd6f6412da29",
+    "sourceDecimals": 18,
+    "cometDecimals": 8,
+    "documentation": "https://docs.litvm.com/integrations/dia",
+    "heartbeatSeconds": 3600,
+    "stablecoinDeviationBps": 50,
+    "otherAssetDeviationBps": 100
+  }
+}

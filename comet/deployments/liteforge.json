@@ -1,0 +1,71 @@
+{
+  "network": "LitVM LiteForge",
+  "chainId": 4441,
+  "rpcUrl": "https://liteforge.rpc.caldera.xyz/http",
+  "explorerUrl": "https://liteforge.explorer.caldera.xyz",
+  "status": "deployed-and-configuration-checked",
+  "sourceVerification": "not-submitted",
+  "deployer": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B",
+  "governor": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B",
+  "pauseGuardian": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B",
+  "upgradeOwner": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B",
+  "comet": "0x836420f3423C9B077ecd4510851F8Ce52fB259D6",
+  "baseToken": "0x5adf1045C4a7C3e2176DbCbD09a7E6D1b0f75cfB",
+  "collateralToken": "0x0000000000000000000000000000000000000000",
+  "configuration": "../config/liteforge.proposed.json",
+  "configurationEnvironmentSha256": "5e30d85989cf1b5b5d1998760544574181de2a070ed16e7f7dfb95baa066085b",
+  "configurationHashEncoding": "SHA-256 of UTF-8 JSON.stringify(environment), retaining recorded key order",
+  "upstreamCometCommit": "f766f51583c23acc33b2a7824654ef2029a96804",
+  "sourceSha256": {
+    "src/LithiumComet.sol": "ef71d4d29de7f2aaee1797539ffadd7797446cb6e64bdf3debc855b1a067b1c6",
+    "src/LithiumCometPriceFeed.sol": "5e471ad82ccf4166d23a38d1a327fd762b64c35339ad2b832ca750e21d67fb89",
+    "src/LithiumNativeAssetList.sol": "dfd52f438b832328c1c88d1e0163cde68aae4fb7a51057b7f59095b7ef26d242"
+  },
+  "transactions": [
+    {
+      "role": "USDC price adapter",
+      "address": "0xaff44f87c090c2fcb7daf29f91e2044b6757a6f2",
+      "transactionHash": "0xfcafefbf51659be4274f64e3e6f3a11072158c842d68daa4c8d720ae6725b76e",
+      "blockNumber": 50909646,
+      "runtimeCodeHash": "0x72a3071d4c94a8edb090c75c6aa9977baa7bdc369443cda2133da6552ac6d5a4"
+    },
+    {
+      "role": "zkLTC price adapter",
+      "address": "0x9abb6e9db7ebf71f54d36b7a2a06b716d4b72884",
+      "transactionHash": "0x67002445fa08a6a93cb21273a5ddfb4160d0ece91c89d577d9f9fc12f7fefb2f",
+      "blockNumber": 50909653,
+      "runtimeCodeHash": "0x64f855edf6d4647124113c5f8a924e2aa5c634d754c8938619171803f3caf245"
+    },
+    {
+      "role": "Comet extension",
+      "address": "0xe96f5bee8180e7fcc3ac0af08ab5f5ceee6185ba",
+      "transactionHash": "0x9fb36821ef04c50b1296d17c1edcd7e79386ed948a50f505ca7a85ad9dcce4de",
+      "blockNumber": 50909669,
+      "runtimeCodeHash": "0x132d004134a82be50ed8efca977896a58a439362d66313c0f46b565effa67d57"
+    },
+    {
+      "role": "Proxy admin",
+      "address": "0x9e4edb0e6fb9198617b2e4d443b8e0612b55a411",
+      "transactionHash": "0x7b03a232a0bc0f16fe62736941d0c04b44eefb3dd7e5edf577df8c302236ea79",
+      "blockNumber": 50909679,
+      "runtimeCodeHash": "0xedc3ed66e385b4f264e42f61ac2868af4da4203e0063f6b332fc886b5981677c"
+    },
+    {
+      "role": "Comet implementation",
+      "address": "0x3fff38793f4aa3f3d9010974ff48cbce344371aa",
+      "transactionHash": "0x2ba4edc742e96e32ae197cae8f420045283f8b22d24161e5f530af4e05c2607d",
+      "blockNumber": 50909685,
+      "runtimeCodeHash": "0x03e9a961644ec6d3d061ee46fd7ab7400579e668a0a039ec56089f3352e1836f"
+    },
+    {
+      "role": "Comet proxy",
+      "address": "0x836420f3423c9b077ecd4510851f8ce52fb259d6",
+      "transactionHash": "0xa4cbeec07f21a24fda2afdabcd6ca6c4587119df99e0eaff7cf4ea0b071d6e19",
+      "blockNumber": 50909697,
+      "runtimeCodeHash": "0x9ffaab6af518bb0af44c6825c65475c03f49f089d663006eb9d5f1d4b93c4c79"
+    }
+  ],
+  "totalGasCostZkLTC": "0.011618817229705",
+  "initialSupplyUSDC": "0",
+  "initialReservesUSDC": "0"
+}
