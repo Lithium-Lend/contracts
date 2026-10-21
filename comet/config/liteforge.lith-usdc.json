@@ -2,6 +2,7 @@
   "network": "LitVM LiteForge",
   "chainId": 4441,
   "deployment": "../deployments/liteforge-lith-usdc.json",
+  "deployer": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B",
   "token": {
     "name": "Lithium USDC",
     "symbol": "lithUSDC",

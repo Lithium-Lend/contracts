@@ -6,6 +6,7 @@
 /comet/cache-liteforge/
 /comet/out/
 /comet/out-liteforge/
+/comet/research/additional-market-results.json
 *.env
 .env.*
 !.env.example

@@ -1,0 +1,29 @@
+{
+  "chainId": 1,
+  "blockNumber": "25978736",
+  "timestamp": "1789425587",
+  "rpcUrl": "https://ethereum-rpc.publicnode.com",
+  "address": "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
+  "addressSource": "https://github.com/compound-finance/comet/blob/f766f51583c23acc33b2a7824654ef2029a96804/deployments/mainnet/usdc/roots.json",
+  "method": "Read each named getter by eth_call at the recorded block. WBTC is getAssetInfoByAddress(WBTC). Annual inputs are per-second getters multiplied by 31536000, reproducing their exact integer values after Comet constructor division.",
+  "supplyKink": "900000000000000000",
+  "borrowKink": "900000000000000000",
+  "supplyPerSecondInterestRateSlopeLow": "1141552511",
+  "supplyPerSecondInterestRateSlopeHigh": "101344495180",
+  "supplyPerSecondInterestRateBase": "0",
+  "borrowPerSecondInterestRateSlopeLow": "880834601",
+  "borrowPerSecondInterestRateSlopeHigh": "114155251141",
+  "borrowPerSecondInterestRateBase": "475646879",
+  "storeFrontPriceFactor": "600000000000000000",
+  "baseBorrowMin": "100000000",
+  "targetReserves": "20000000000000",
+  "WBTC": {
+    "asset": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "priceFeed": "0xc8E4c3F58d5FC4409522503927Ecea057EbbA1fc",
+    "scale": "100000000",
+    "borrowCollateralFactor": "800000000000000000",
+    "liquidateCollateralFactor": "850000000000000000",
+    "liquidationFactor": "900000000000000000",
+    "supplyCap": "1000000000000"
+  }
+}

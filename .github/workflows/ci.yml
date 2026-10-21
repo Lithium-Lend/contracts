@@ -19,6 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
+          fetch-depth: 0
           persist-credentials: false
       - name: Initialize token dependencies
         run: git submodule update --init --recursive -- lib/forge-std lib/openzeppelin-contracts
@@ -38,6 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
+          fetch-depth: 0
           persist-credentials: false
       - name: Initialize Comet dependencies
         working-directory: .
@@ -53,12 +55,21 @@ jobs:
         run: test "$(git -C lib/comet rev-parse HEAD)" = "f766f51583c23acc33b2a7824654ef2029a96804"
       - name: Build cross-compiler test asset
         working-directory: .
-        run: forge build src/testnet/LithiumUSDC.sol
+        run: forge build src/testnet/LithiumUSDC.sol src/testnet/LithiumUSDT.sol
       - run: forge lint --color never
       - run: forge fmt --check
       - run: forge build --sizes --skip test --skip script
       - run: node script/verify-liteforge.mjs --check
+      - run: node script/check-market-boundaries.mjs
+      - run: node research/rate-simulation.mjs
+      - run: node research/additional-market-simulation.mjs --check
+      - name: Check additional market compiler inputs
+        run: |
+          node script/verify-additional.mjs usdt --check
+          node script/verify-additional.mjs zkltc --check
+          node script/verify-additional.mjs token --check
       - run: forge test -vvv
+      - run: node ../script/check-abis.mjs
       - name: Verify upstream files are unchanged
         working-directory: .
         run: test -z "$(git -C lib/comet status --porcelain)"

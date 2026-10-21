@@ -1,0 +1,13 @@
+{
+  "baseline": "81e665ab2f9db9d749c2fc1f8d96828ff9e81499",
+  "normalization": "LF",
+  "sourceSha256": {
+    "comet/src/LithiumComet.sol": "7f5d775fe5e2b17618cc88a4c3505c4b95788ecb084b08f589416eb8cfb80f60",
+    "comet/src/LithiumNativeAssetList.sol": "dfd52f438b832328c1c88d1e0163cde68aae4fb7a51057b7f59095b7ef26d242",
+    "comet/src/LithiumCometPriceFeed.sol": "5e471ad82ccf4166d23a38d1a327fd762b64c35339ad2b832ca750e21d67fb89",
+    "comet/script/DeployLithiumComet.s.sol": "715e54f6fcf1b2706d175bc3355c3e43f80070c37b7e0398224918ca86b63fa4",
+    "comet/config/liteforge.lith-usdc.json": "d554a4e4c7193df66c17dc1bc3f4115d1fe1c026defc60784b1339cbaa3ad37c",
+    "comet/deployments/liteforge-lith-usdc.json": "8983e5c8e50e94c822b5387a9685071673a6afbff75d145f87d8fbac5b23f036",
+    "src/testnet/LithiumUSDC.sol": "973ab3d9a0957f5dc1a0276aaa27b13e3ef0d5e4d9aebfe246a233232291c842"
+  }
+}

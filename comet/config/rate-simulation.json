@@ -1,0 +1,76 @@
+{
+  "status": "historical-rate-comparison",
+  "baseline": "liteforge.proposed.json",
+  "selectedConfiguration": "liteforge.rate-update.json",
+  "objective": "Preserve the full supplier curve and remove the systematic interest subsidy by raising the borrowing base to 3.6%. Require continuous rate coverage and actual-accrual tests, allowing bounded rounding dust. The 2.55% half-increase is an unselected comparison only. The 10% margin in buffered cases is illustrative.",
+  "preferredCandidateIndex": 5,
+  "nonSubsidizedReferenceIndex": 5,
+  "candidates": [
+    {
+      "id": "baseline",
+      "label": "Original deployed curves",
+      "allowsSubsidy": true,
+      "overrides": {}
+    },
+    {
+      "id": "borrow-preserving-boundary",
+      "label": "Preserve borrowing, no low-utilization margin",
+      "overrides": {
+        "COMET_SUPPLY_SLOPE_LOW": "15000000000000000"
+      }
+    },
+    {
+      "id": "borrow-preserving-buffered",
+      "label": "Preserve borrowing, 10% minimum interest margin",
+      "overrides": {
+        "COMET_SUPPLY_SLOPE_LOW": "13500000000000000"
+      }
+    },
+    {
+      "id": "balanced-buffered",
+      "label": "Split the adjustment",
+      "overrides": {
+        "COMET_BORROW_RATE_BASE": "25000000000000000",
+        "COMET_SUPPLY_SLOPE_LOW": "22500000000000000"
+      }
+    },
+    {
+      "id": "supply-preserving-buffered",
+      "label": "Preserve supply rates, raise borrowing",
+      "overrides": {
+        "COMET_BORROW_RATE_BASE": "40000000000000000"
+      }
+    },
+    {
+      "id": "supply-preserving-boundary",
+      "label": "Preserve supply rates, minimum borrow-base adjustment",
+      "overrides": {
+        "COMET_BORROW_RATE_BASE": "36000000000000000"
+      }
+    },
+    {
+      "id": "supplier-protective-buffered",
+      "label": "Approximately 10% lower supply low slope, rounded down to meet the margin after constructor truncation",
+      "overrides": {
+        "COMET_SUPPLY_SLOPE_LOW": "32399999959824000",
+        "COMET_BORROW_RATE_BASE": "36000000000000000"
+      }
+    },
+    {
+      "id": "supplier-protective-five-percent",
+      "label": "5% lower supply low slope, 10% minimum interest margin",
+      "overrides": {
+        "COMET_SUPPLY_SLOPE_LOW": "34200000000000000",
+        "COMET_BORROW_RATE_BASE": "38000000000000000"
+      }
+    },
+    {
+      "id": "supply-preserving-half-increase",
+      "label": "Unselected 2.55% comparison, retains a subsidy",
+      "allowsSubsidy": true,
+      "overrides": {
+        "COMET_BORROW_RATE_BASE": "25500000000000000"
+      }
+    }
+  ]
+}

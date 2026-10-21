@@ -22,3 +22,8 @@ submodule. The Lithium derivative is distributed under GPL-2.0-or-later. See
 - Guard liquidation and reserve paths against native callback reentry.
 - Validate recipients, administrative approvals, rewards, and configuration.
 - Validate DIA price rounds, enforce freshness, and normalize feed precision.
+- Add an independent USDT-base market with native zkLTC collateral.
+- Add a native zkLTC-base market with one USDC collateral asset, payable base
+  transfers, separate cash accounting, and native callback protection.
+
+See [the Comet notices](comet/NOTICE.md) for the per-implementation changes.
