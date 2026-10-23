@@ -23,12 +23,12 @@ liquidation, reserve deficits, and differential behavior against Comet.
 
 ## Build and test
 
-From the repository root, initialize the pinned dependencies and build the USDC
-test asset before running the cross-compiler integration suite:
+From the repository root, initialize the pinned dependencies and build both
+test tokens before running the cross-compiler integration suite:
 
 ```sh
 git submodule update --init --recursive
-forge build src/testnet/LithiumUSDC.sol
+forge build src/testnet/LithiumUSDC.sol src/testnet/LithiumUSDT.sol
 cd comet
 forge fmt --check
 forge build --sizes --skip test --skip script
@@ -54,6 +54,7 @@ The creation manifests above are historical. Apply the cap upgrade record to
 identify the current implementations behind the same three proxies. Its
 transactions replace only the implementation pointer, without an initializer.
 Collateral, supplied balances, debts, and allowances are preserved.
+Users do not need a refund, reset, or redeposit to use the new capacity.
 
 | Market | Collateral cap across all wallets |
 | --- | ---: |
@@ -61,13 +62,20 @@ Collateral, supplied balances, debts, and allowances are preserved.
 | USDT | 1,000 zkLTC |
 | zkLTC | 1,000,000 USDC |
 
+Each cap is shared by all wallets in that market, not granted to each user.
+The two zkLTC collateral caps are independent. A full cap blocks further
+collateral deposits; existing positions and withdrawal checks remain in place.
+Increasing it does not add lending cash, reserves, or liquidation buyers.
+Caps constrain the exposure that may need liquidation during a common shock.
+The 60% borrowing limit controls individual position leverage separately.
+
 The [shared schedule](config/shared-collateral-caps.json) contains the same
 candidate amounts for testnet and mainnet. These amounts provide testing capacity;
 they are not a production risk assessment. Mainnet activation requires measured
 liquidation liquidity, funded reserves and liquidators, and approved loss limits.
 Any revised mainnet amounts must be tested through this same schedule first.
 
-The current additional markets use 60% borrowing and 70% liquidation thresholds.
+All three markets use 60% borrowing and 70% liquidation thresholds.
 Their risk settings are for valueless LiteForge testing. Target reserves are a
 collateral-sale threshold, not proof of a funded reserve balance.
 
@@ -94,6 +102,18 @@ records the compiler input and bytecode hashes. Reproduce and check it with:
 node script/prepare-cap-upgrade-build.mjs /path/to/solc-0.8.15 /tmp/lithium-cap-build
 node script/check-cap-upgrades.mjs
 ```
+
+Explorer verification of these current implementations is deferred. The
+historical verification commands above do not verify the cap upgrades.
+
+## Testnet assets
+
+The [repository faucet table](../README.md#testnet-faucets) lists the Lithium
+USDC and Lithium USDT contracts and their supported uses. Both are unbacked,
+six-decimal test tokens. The [application faucet](https://www.lithiumlend.com/app/faucet)
+allows 10,000 of each token per wallet every 24 hours with independent cooldowns.
+Claims need native zkLTC gas and no token approval. Native zkLTC comes from the
+[LitVM portal](https://testnet.litvm.com).
 
 ## Integration
 
