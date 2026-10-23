@@ -1,0 +1,217 @@
+{
+  "compilerVersion": "v0.8.15+commit.e14f2714",
+  "originalInputSha256": "0e2ea51157efdaa7b9e000d64d5a19a80891a0a8226ad11fb1495dbc22b14df9",
+  "inputSha256": "92dacc93689a9fd6a664fb17054ff48536dee158fd548376f9c7667478082594",
+  "outputSha256": "c6ef2104268bdb99742ed513b40ed3b1046b67ad220f23306752b8a35434223a",
+  "sourceCount": 72,
+  "originalSourcesUnchanged": true,
+  "checks": [
+    {
+      "contract": "LithiumComet",
+      "creationSha256": "7736ac9fa5b681ffc7f310ee4119e6e82ae1f161553d6ee6fd4f88541fb8b291",
+      "storageLayoutSha256": "c7e641228d32459b192648236dac8ddf3914ef75180e04831ebdc224e8f1ac03",
+      "storageEntries": 15,
+      "runtimeBytes": 21004
+    },
+    {
+      "contract": "LithiumUSDTComet",
+      "creationSha256": "7a44010a5bd2af4e1e50f0c32121d87ad9aeca92855dcb82a5e1fadfea61ba0d",
+      "storageLayoutSha256": "1c8e902f362861a9627722ef4506e069362c72f56e14c1894e6f579aeab4a5a1",
+      "storageEntries": 15,
+      "runtimeBytes": 21004
+    },
+    {
+      "contract": "LithiumNativeBaseComet",
+      "creationSha256": "0a45e646d1a87683a73e2b9a759effff8defa1c3e5be1a265db89fd239a1ffdb",
+      "storageLayoutSha256": "d7e5be3bc165cb962dccca124fff7d1187f3fde3eead109379ae4fb6a9d16710",
+      "storageEntries": 16,
+      "runtimeBytes": 21150
+    }
+  ],
+  "sourceSha256": {
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/CometConfiguration.sol": "e055b1588dcd7d24ba8dd79b2fec7bcb8132b1bfbf8670448ad37d7150cc75b4",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/CometCore.sol": "1d80f0d12c101d01c2e1f38e8662cfcf350299b1c78188f8c501bb1c51b5ec78",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/CometExtInterface.sol": "8a8335485870edd1ceaf4a13907932a6630fb1592cba02595d8c785ee359028e",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/CometMath.sol": "b649c9c7bdc945ed7901da3454a526deb8e73400243069e36670bf8a89267a0f",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/CometStorage.sol": "7475e03d2945a35e9bbd93fa96ba8bc18d50f60cdb9ea992e6742efbc199850c",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/vendor/access/Ownable.sol": "71b08e50ae7d844a6a217ff1b0bc3be86c74c421144f8b2e819190469fad8f16",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/vendor/interfaces/draft-IERC1822.sol": "38728bce05e2b518d0ef66d514dbfcdee5555aeac2d57729480bf1409ee63630",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/vendor/proxy/ERC1967/ERC1967Proxy.sol": "db6c986d393626060fa219d1072a1913eb16872224307e9261fc90c296e3770d",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/vendor/proxy/ERC1967/ERC1967Upgrade.sol": "a137681e196c44eaf1b819384a9633aef5cee10954ff1301138557cab2169dac",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/vendor/proxy/Proxy.sol": "c26f460761bab92443c5f900b20024b0433900762f5f4bf6f6612f7bee7c2f34",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/vendor/proxy/beacon/IBeacon.sol": "6afea1d83856ed8e0495fe78109f674f925cfdc79fe2e24e854b1237e742f011",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/vendor/proxy/transparent/TransparentUpgradeableProxy.sol": "95ec54d0e8065f04805f220da2d880c150e9a90181afed85e28d4958915ff7fb",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/vendor/utils/Address.sol": "aafa8f3e41700a8353aabcdf020e06735753e6bc4b615279b43de53cfbb4f2cd",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/vendor/utils/Context.sol": "1458c260d010a08e4c20a4a517882259a23a4baa0b5bd9add9fb6d6a1549814a",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/comet/contracts/vendor/utils/StorageSlot.sol": "b8d43f55a3afc09327fb9d802f714a8bec64e3a259ad42f5b3d877deb29aaaef",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/Base.sol": "76b05dda37981797d3d403f29fc6cad79b46e2fc11da47d649ff13acb69158b2",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/StdChains.sol": "981b7ce12f4bc3193c7914c68f51be74d1d03c33732db894f5d36ad8025ab4f5",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/StdCheats.sol": "988843996b3e8ebab594c659fba9502bab437220f84e7ded9a9e3f6e730d358e",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/StdConstants.sol": "17dfd996881264de1e6af6697a3dc7a56ae8ff0717e4cb4f1685bd7fb3a45147",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/StdJson.sol": "556494110d1e791ce0992bf22c2ac6df5e614122659a97cd1269a8d9dce139c0",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/StdMath.sol": "7224cea66fc06c7a9d303084cccb14eaedffe4b21b3f9695d06dc590d2894d7d",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/StdStorage.sol": "8835d2e5de9ceca2a4988a212916216de052634584f832d5364dc8c42d460113",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/StdStyle.sol": "903ea6f4e4aa31e416b5043abecc09ced41dc78c9ce9dabb5c745337ee13139d",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/StdUtils.sol": "52d713d886305184e7ed3b3a2e5941ea1440f071d9c9a4d6fea618135e1d3f67",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/Vm.sol": "ad4bc58d4a2cfdb45c6439fe977a7ad390fd83e3e7485ec4597458a278993eeb",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/console.sol": "894dc6e40fe62d887df6243112d8c775df2db60babc3024ee04a5564b90af64d",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/console2.sol": "62d8ccbd118fec4f99c5e847322d6ca0d7fbe6a0a16e5a26b0590869fcd69357",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/interfaces/IMulticall3.sol": "890a5b361034daa6006b3ba2275e743cd6197c4d81e3df5732cdce731d3c0868",
+    "C:/Users/Garou/Desktop/Lithium/output/lending-markets/contracts/lib/forge-std/src/safeconsole.sol": "fd74d8ed377e1470217cd6dce7699dcbc4e79b3893f17ae2a298c0e7e4418181",
+    "../lib/comet/contracts/CometConfiguration.sol": "e055b1588dcd7d24ba8dd79b2fec7bcb8132b1bfbf8670448ad37d7150cc75b4",
+    "../lib/comet/contracts/CometCore.sol": "1d80f0d12c101d01c2e1f38e8662cfcf350299b1c78188f8c501bb1c51b5ec78",
+    "../lib/comet/contracts/CometExt.sol": "16b3cd08e5f9a1e6d82f4cfba20ab95d1cf4f246908641234d9e71e370fbfb59",
+    "../lib/comet/contracts/CometMainInterface.sol": "8dab837c9ef1d3805413b2d5c948d8c1f5b009da4e4f9505795b2a1535ec0d1b",
+    "../lib/comet/contracts/interfaces/IAssetList.sol": "7b44e358f79a19cb1f546b39860a3a9deb888766856f6d19024a24053316c9a7",
+    "../lib/comet/contracts/interfaces/IERC20NonStandard.sol": "520c9275eeecb6867afd1afe765aa58a29e8789cc2c0e396252e36047ca389b3",
+    "../lib/comet/contracts/interfaces/IPriceFeed.sol": "785123d77415efc00f8aee4e1cf600b8bebc46813412283d3dd5673bd23d53f8",
+    "../lib/comet/contracts/vendor/proxy/transparent/ProxyAdmin.sol": "cce3c1ff653b9521ef04245c772a65b49aca4a3bb34e6f6a9a2056b9b6ac6ff6",
+    "../lib/comet/contracts/vendor/proxy/transparent/TransparentUpgradeableProxy.sol": "95ec54d0e8065f04805f220da2d880c150e9a90181afed85e28d4958915ff7fb",
+    "../lib/forge-std/src/Script.sol": "cfb5be01f4ddbc037a3502dac3d487d629a4c8b58aa9e2ec48c9fa1b334d96ec",
+    "script/DeployAdditionalMarkets.s.sol": "1775c1376df12f2b29fe5fab0752ce742033ad3c460420598a43583ff1451ddd",
+    "src/LithiumComet.sol": "7f5d775fe5e2b17618cc88a4c3505c4b95788ecb084b08f589416eb8cfb80f60",
+    "src/LithiumCometPriceFeed.sol": "5e471ad82ccf4166d23a38d1a327fd762b64c35339ad2b832ca750e21d67fb89",
+    "src/LithiumErc20AssetList.sol": "65b3bc7d4adb4efcc4bc1c431f6f4299e859f6f1242467ff64356993d0aeef05",
+    "src/LithiumNativeAssetList.sol": "dfd52f438b832328c1c88d1e0163cde68aae4fb7a51057b7f59095b7ef26d242",
+    "src/LithiumNativeBaseComet.sol": "3fb0bffe4097aaa65768a77ab8abea263673d56d735bbe90e9e68e1f021af7f6",
+    "src/LithiumUSDTComet.sol": "6c61d1c068806491e546ae4cf52c34aa91ba34109c66ae149f1757537174c6bd",
+    "../lib/comet/contracts/CometExtInterface.sol": "219294affdf3933fb5c386258a939941e397df833398590b36c1221a95b901fa",
+    "../lib/comet/contracts/CometMath.sol": "62b9f2017fba29e50bbbdb50e53bc91a9b51ac7db2ad3873b623c5e254840686",
+    "../lib/comet/contracts/CometStorage.sol": "8d5ec4c3124fffab14e170698629886e7cd9b1970e205193db95dacd3863ed6d",
+    "../lib/comet/contracts/vendor/access/Ownable.sol": "81ad499394f35109e3d719e2a6f10cd48779e1ad7e2a1ebe6faa71f890041780",
+    "../lib/comet/contracts/vendor/interfaces/draft-IERC1822.sol": "aeec1b57ee58da0bba6f6ba603c19ea05627f907ffa07aa31c2c4979103e2c36",
+    "../lib/comet/contracts/vendor/proxy/ERC1967/ERC1967Proxy.sol": "e7e99995790b77bdb84450b23833bedecdeb372b836d535171affe32d8f312fa",
+    "../lib/comet/contracts/vendor/proxy/ERC1967/ERC1967Upgrade.sol": "9813cca55b13c87ce5d180b479e9382b5a91458a10a0402d02c970e30545a650",
+    "../lib/comet/contracts/vendor/proxy/Proxy.sol": "632a5841233968189833154187a6595c7568bd8040dda7d3d8fabba100083ae6",
+    "../lib/comet/contracts/vendor/proxy/beacon/IBeacon.sol": "835c6c358ba47fa64459990de8991ac5f41504825e3d3772a07803c1d523181a",
+    "../lib/comet/contracts/vendor/utils/Address.sol": "56ad2e2ed5d8f2d7f108d4bca4e754e81508cb3c50d40fd2b2be41daa128b4f6",
+    "../lib/comet/contracts/vendor/utils/Context.sol": "4cfde82900087734f7fa5be775eaa767bba1996f5e1445e2516a1c8c19b73be7",
+    "../lib/comet/contracts/vendor/utils/StorageSlot.sol": "2170870abd807cf03d2caf31848547443765a090f53e399bd800fc38f450b7cf",
+    "../lib/forge-std/src/Base.sol": "608b2a4200d4818f616dd767f0689d3dd26b4c87f5abb1950cc38f3424b6caba",
+    "../lib/forge-std/src/StdChains.sol": "2d8b982dc649aa90f4dd28ef22da15f5414022d7df1afacf5ccff3e974921593",
+    "../lib/forge-std/src/StdCheats.sol": "c07d2aadf428cd6f6020aebb9da84d26e6268bebf75f770543d7cce97a356ecb",
+    "../lib/forge-std/src/StdConstants.sol": "572e3c3c4d1f9754e3edc7af5157115235d3ade025a31a9bb4e0429d69602551",
+    "../lib/forge-std/src/StdJson.sol": "39f9e684976f4553c241df633856900169ca0b7257b0fcde4d3220f22492ce17",
+    "../lib/forge-std/src/StdMath.sol": "a3086721195ebd3f799d3557333ed3542e8c672517c1ceedb92ad4b329f120e9",
+    "../lib/forge-std/src/StdStorage.sol": "6386eeda725e00908ba8efca4a40d38215745c15d4e80e35d10c3ec70970bbbc",
+    "../lib/forge-std/src/StdStyle.sol": "b2c9d4f17448d3395fbeb4cd5b0472ab19c29ec15377286a88e113779bc2d4c5",
+    "../lib/forge-std/src/StdUtils.sol": "b476be0123c800f6e118db4c4265427b27926c2cc7aaabeef0118e781fc5fa29",
+    "../lib/forge-std/src/Vm.sol": "c5759c9cdc493c68820fd42ed4b3a1518cade6282eeda488f9f6b8884a4d39ee",
+    "../lib/forge-std/src/console.sol": "8125f7d9288751c15d4042dd05c275d8a879dd7a074e778977298169c06db39c",
+    "../lib/forge-std/src/console2.sol": "a675b2d87278d46a787546099c20133fa5ec191f293d33bab103b6edcb0bd74e",
+    "../lib/forge-std/src/interfaces/IMulticall3.sol": "9f6f91c8678ebc879f822911013b3eab7e5afba915f931659102c42c3e8fb98d",
+    "../lib/forge-std/src/safeconsole.sol": "22bb9e3835a13ed2be569f035eb26c915275fd886cf58f1cb1d318a229cb5aff"
+  },
+  "settings": {
+    "remappings": [
+      "comet/=../lib/comet/contracts/",
+      "forge-std/=../lib/forge-std/src/",
+      "@comet-contracts/=../lib/comet/contracts/",
+      "@forge-std/=../lib/comet/forge/lib/forge-std/",
+      "@openzeppelin/=../lib/comet/node_modules/@openzeppelin/",
+      "compound-protocol/=../lib/compound-protocol/",
+      "erc4626-tests/=../lib/openzeppelin-contracts/lib/erc4626-tests/",
+      "eth-gas-reporter/=../lib/comet/node_modules/eth-gas-reporter/",
+      "halmos-cheatcodes/=../lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/",
+      "hardhat/=../lib/comet/node_modules/hardhat/",
+      "openzeppelin-contracts/=../lib/openzeppelin-contracts/"
+    ],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "useLiteralContent": false,
+      "bytecodeHash": "ipfs"
+    },
+    "outputSelection": {
+      "src/LithiumCometPriceFeed.sol": {
+        "LithiumCometPriceFeed": [
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences",
+          "metadata",
+          "abi"
+        ]
+      },
+      "../lib/comet/contracts/CometExt.sol": {
+        "CometExt": [
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences",
+          "metadata",
+          "abi"
+        ]
+      },
+      "../lib/comet/contracts/vendor/proxy/transparent/ProxyAdmin.sol": {
+        "ProxyAdmin": [
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences",
+          "metadata",
+          "abi"
+        ]
+      },
+      "src/LithiumNativeBaseComet.sol": {
+        "LithiumNativeBaseComet": [
+          "abi",
+          "metadata",
+          "storageLayout",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences"
+        ]
+      },
+      "../lib/comet/contracts/vendor/proxy/transparent/TransparentUpgradeableProxy.sol": {
+        "TransparentUpgradeableProxy": [
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences",
+          "metadata",
+          "abi"
+        ]
+      },
+      "src/LithiumErc20AssetList.sol": {
+        "LithiumErc20AssetList": [
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences",
+          "metadata",
+          "abi"
+        ]
+      },
+      "src/LithiumUSDTComet.sol": {
+        "LithiumUSDTComet": [
+          "abi",
+          "metadata",
+          "storageLayout",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences"
+        ]
+      },
+      "src/LithiumNativeAssetList.sol": {
+        "LithiumNativeAssetList": [
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences",
+          "metadata",
+          "abi"
+        ]
+      },
+      "src/LithiumComet.sol": {
+        "LithiumComet": [
+          "abi",
+          "metadata",
+          "storageLayout",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "evm.deployedBytecode.immutableReferences"
+        ]
+      }
+    },
+    "evmVersion": "london",
+    "viaIR": true,
+    "libraries": {}
+  }
+}

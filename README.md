@@ -25,6 +25,14 @@ The additional markets use a 60% borrowing limit and a 70% liquidation threshold
 Their deployment records start with zero supplied liquidity and zero funded
 reserves. Borrowing requires available liquidity.
 
+The collateral caps are 1,000 zkLTC in each stablecoin market and 1,000,000 USDC
+in the zkLTC market. Each limit applies to all collateral in that market, across
+all wallets. The [cap upgrade record](comet/deployments/liteforge-collateral-cap-upgrades.json)
+records the current implementations. Market addresses and positions are retained.
+These are testnet capacity limits and candidate mainnet limits; production use
+requires the liquidity and funding review in the
+[shared schedule](comet/config/shared-collateral-caps.json).
+
 The deployment manifest records the contract addresses, creation transactions,
 source hashes, compiler targets, and pinned upstream revision.
 See the [market guide](comet/README.md) and the [USDT](comet/deployments/liteforge-usdt.json)

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "status": "candidate-launch-limits",
+  "mainnetDeploymentAuthorized": false,
+  "capacityAssumption": {
+    "simultaneousPositionsPerMarket": 1000,
+    "averageZkltcCollateral": "1",
+    "averageUsdcCollateral": "1000"
+  },
+  "markets": {
+    "usdc": { "collateral": "zkLTC", "decimals": 18, "supplyCap": "1000000000000000000000" },
+    "usdt": { "collateral": "zkLTC", "decimals": 18, "supplyCap": "1000000000000000000000" },
+    "zkltc": { "collateral": "USDC", "decimals": 6, "supplyCap": "1000000000000" }
+  },
+  "mainnetRequirements": [
+    "Confirm actual production tokens, bridge behavior, chain identity, and feeds.",
+    "Measure executable liquidation routes under correlated liquidations and liquidity withdrawals.",
+    "Approve loss tolerance and fund protocol reserves and liquidator inventory.",
+    "Validate rates, collateral factors, oracle latency, and liquidation incentives jointly.",
+    "Use identical approved cap values on testnet before any mainnet activation."
+  ]
+}

@@ -61,6 +61,9 @@ jobs:
       - run: forge build --sizes --skip test --skip script
       - run: node script/verify-liteforge.mjs --check
       - run: node script/check-market-boundaries.mjs
+      - run: node script/check-cap-upgrades.mjs
+      - name: Reproduce cap upgrade compiler input
+        run: node script/prepare-cap-upgrade-build.mjs "$HOME/.svm/0.8.15/solc-0.8.15" "$RUNNER_TEMP/lithium-cap-build"
       - run: node research/rate-simulation.mjs
       - run: node research/additional-market-simulation.mjs --check
       - name: Check additional market compiler inputs
