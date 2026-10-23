@@ -6,7 +6,9 @@ Contributions should be focused, reviewable, and covered by tests.
 2. Create a branch from `main`.
 3. Add or update tests with the implementation.
 4. Run the complete local validation suite.
-5. Open a pull request with a clear security and compatibility summary.
+5. Open a pull request with a short, plain description of what it adds or fixes.
+   Keep check results, internal process notes, and assistant attribution out of
+   the title and description. Continue performing the required checks.
 
 Do not commit secrets, private keys, seed phrases, RPC credentials, generated
 build output, or deployment signing material.
@@ -15,7 +17,7 @@ build output, or deployment signing material.
 
 ```sh
 forge fmt --check
-forge build src/testnet/LithiumUSDC.sol
+forge build src/testnet/LithiumUSDC.sol src/testnet/LithiumUSDT.sol
 forge test -vvv
 cd comet
 forge fmt --check
