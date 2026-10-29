@@ -28,7 +28,8 @@ jobs:
           version: v1.8.0
       - run: forge fmt --check
       - run: forge build --sizes
-      - run: forge test -vvv
+      # Deployment tests mutate the same process environment variables.
+      - run: forge test -vvv --threads 1
 
   comet:
     runs-on: ubuntu-24.04
@@ -61,7 +62,11 @@ jobs:
       - run: forge build --sizes --skip test --skip script
       - run: node script/verify-liteforge.mjs --check
       - run: node script/check-market-boundaries.mjs
+      - name: Test deployment attestation controls
+        working-directory: .
+        run: node --test script/test-attestation.mjs script/test-explorer.mjs script/test-slither-review.mjs
       - run: node script/check-cap-upgrades.mjs
+      - run: node script/verify-current.mjs --check
       - name: Reproduce cap upgrade compiler input
         run: node script/prepare-cap-upgrade-build.mjs "$HOME/.svm/0.8.15/solc-0.8.15" "$RUNNER_TEMP/lithium-cap-build"
       - run: node research/rate-simulation.mjs
@@ -77,13 +82,60 @@ jobs:
         working-directory: .
         run: test -z "$(git -C lib/comet status --porcelain)"
 
+  analysis:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [token, comet]
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24.11.1'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14.0'
+      - uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+        with:
+          version: v1.8.0
+      - name: Initialize dependencies
+        run: >-
+          git -c url."https://github.com/".insteadOf=git@github.com:
+          submodule update --init --recursive --
+          lib/comet lib/forge-std lib/openzeppelin-contracts
+      - name: Install pinned independent analyzer
+        run: |
+          python -m pip install --require-hashes --only-binary=:all: -r security/requirements.txt
+      - name: Analyze production contracts
+        env:
+          ANALYSIS_PROJECT: ${{ matrix.project }}
+        run: node script/run-slither.mjs "$ANALYSIS_PROJECT"
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        if: always()
+        with:
+          name: analysis-${{ matrix.project }}
+          path: |
+            attestation/slither-*.json
+            attestation/slither-*.log
+          retention-days: 30
+          if-no-files-found: error
+
+  deployment:
+    uses: ./.github/workflows/deployment.yml
+
   validate:
     if: always()
-    needs: [token, comet]
+    needs: [token, comet, analysis, deployment]
     runs-on: ubuntu-24.04
     steps:
       - name: Require contract jobs
         env:
           TOKEN_RESULT: ${{ needs.token.result }}
           COMET_RESULT: ${{ needs.comet.result }}
-        run: test "$TOKEN_RESULT" = success && test "$COMET_RESULT" = success
+          ANALYSIS_RESULT: ${{ needs.analysis.result }}
+          DEPLOYMENT_RESULT: ${{ needs.deployment.result }}
+        run: test "$TOKEN_RESULT" = success && test "$COMET_RESULT" = success && test "$ANALYSIS_RESULT" = success && test "$DEPLOYMENT_RESULT" = success

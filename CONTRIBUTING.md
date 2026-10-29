@@ -18,7 +18,7 @@ build output, or deployment signing material.
 ```sh
 forge fmt --check
 forge build src/testnet/LithiumUSDC.sol src/testnet/LithiumUSDT.sol
-forge test -vvv
+forge test -vvv --threads 1
 cd comet
 forge fmt --check
 forge build --sizes --skip test --skip script

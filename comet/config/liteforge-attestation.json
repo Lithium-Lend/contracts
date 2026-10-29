@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "chainId": 4441,
+  "rpcUrl": "https://liteforge.rpc.caldera.xyz/http",
+  "referenceBlock": {
+    "number": 65692029,
+    "hash": "0xac41515e4df58dbcee2b52f0e7b91971f7be34b756a26925a612005d40fbffd9"
+  },
+  "acceptedTestnetTrust": {
+    "governance": "Single EOA accepted for testnet. Multisig, timelock, and separate guardian deferred to mainnet by the maintainer.",
+    "oracle": "Mutable DIA wrappers and backing source remain external trust dependencies. Configuration is monitored; correct prices are not independently guaranteed.",
+    "productionReady": false
+  },
+  "healthPolicy": {
+    "capWarningBps": 7000,
+    "capCriticalBps": 9000,
+    "minimumCashBps": 100
+  },
+  "components": [
+    {
+      "address": "0xc4361F046d767615ea70b8C65f7740CEB775Bbed",
+      "role": "LithiumUSDC",
+      "codeHash": "0x71040fc6a154ca2fb9c2e6f76f1253179ca50c49a68df1f103e1fea830f82d83",
+      "owner": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B"
+    },
+    {
+      "address": "0x46F32802cEeB8509CEBEB065E391CBe8D2648e62",
+      "role": "USDC price adapter",
+      "codeHash": "0xaa9b0c729bad9a5688937780389f56200f54b3976503a2766a53f853d9d21b51"
+    },
+    {
+      "address": "0x970fB75b1F2767cA2F95A6F1a42fb9aCd7309653",
+      "role": "zkLTC price adapter",
+      "codeHash": "0xccee307b957bc2e33ee981969662ddb4668cde8ffb5c99489598b6e127e630fa"
+    },
+    {
+      "address": "0x34436312A52A0E9d5162391DFB0E8138511d7ff0",
+      "role": "Comet extension",
+      "codeHash": "0x9bec3383616ea0f0cf405fbff26e754d308774e68ae69ebe61466830d6ff0a58"
+    },
+    {
+      "address": "0x7d82967D84079c84fF69766d566101a20b562dBa",
+      "role": "Proxy admin",
+      "codeHash": "0x143dd34344844179c4e4c6674910072569e48ae017f8fc7e7b1b08434e95c798",
+      "owner": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B"
+    },
+    {
+      "address": "0x9AAF693E76547ab9423D680890F5c8432C4c9619",
+      "role": "Comet proxy",
+      "codeHash": "0x3e22314af17e16a7b31a2316bfebca11879ad8e99b997bc97a44a6283def9277"
+    },
+    {
+      "address": "0xC6c750C1aFb7fa17c24e13EBba2ea463F6cb5Fd4",
+      "role": "usdc implementation",
+      "codeHash": "0xee73532cc4e26606040eed1065d86f403b92fc532e06b269ec95a6dc6f673222"
+    },
+    {
+      "address": "0x00f3cE8d1116d53d91e8f90F407Cd88B5f89F388",
+      "role": "usdc asset list",
+      "codeHash": "0xda203e1ade2bef0837aa04f7c62768bd9abd8bc2e7712e032895764239572d54"
+    },
+    {
+      "address": "0x6F6770558A874bD53fdBd16899d0DC518003b8ED",
+      "role": "LithiumCometPriceFeed",
+      "codeHash": "0xf75ed56de8b1510454e3b290305e79190d9f61f5c273404cdd1e359303391f1c"
+    },
+    {
+      "address": "0x9Dbe30a3b125A2336C62Dd7F484C6CeBCC45170b",
+      "role": "LithiumCometPriceFeed",
+      "codeHash": "0x9414e654a92dc98c77909258e7df91a36bf3456914ed32b5ad09dbbee84bd677"
+    },
+    {
+      "address": "0xb7967Cb26A24E06f20fB35Cc275eC1bA31C5EA2a",
+      "role": "CometExt",
+      "codeHash": "0xf3eae8df0cdee71ae6323b5984f787c7e6d6e2aaea7798381ee7dd812d34ee04"
+    },
+    {
+      "address": "0x573a573f2e45cB159358e49E0894bBB56E355765",
+      "role": "ProxyAdmin",
+      "codeHash": "0x79bc965977f3acfd43b3b2f5399fbfbcac9bc897558744b1f15318a298d94a31",
+      "owner": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B"
+    },
+    {
+      "address": "0x5AbB1216c61b36518a37Cd6dCC4733bf9aFe3895",
+      "role": "TransparentUpgradeableProxy",
+      "codeHash": "0xdec0861681a105c81ade085fc2a0a093f6d12dbe69225bc4bcc4ae5c8d83e0d8"
+    },
+    {
+      "address": "0x1694a4832ab52d83ABc0A4a63601E97000edE98b",
+      "role": "usdt implementation",
+      "codeHash": "0x7fb47823f70b19b908a215f8aab63dd085697044ae0d0c199b206d43136e92d7"
+    },
+    {
+      "address": "0xd2025e707AE68e8a6e744Ac33674B12ad21dE49F",
+      "role": "usdt asset list",
+      "codeHash": "0x197e21dcb71fb5a6e292dd81e91e722823b9db99edd515046e680afa7b975171"
+    },
+    {
+      "address": "0x9F93D4747063bEA81986B57b7F5ef65Cd7AF7036",
+      "role": "LithiumCometPriceFeed",
+      "codeHash": "0x9414e654a92dc98c77909258e7df91a36bf3456914ed32b5ad09dbbee84bd677"
+    },
+    {
+      "address": "0xd1813223c7a84C1bA6bB7aCEDA5fa9004e5ecaCd",
+      "role": "LithiumCometPriceFeed",
+      "codeHash": "0xc33c5051cd2db74fc47f2652c6593315f3cf3d07ed5c63904226549f54669aec"
+    },
+    {
+      "address": "0x6A149DC1718c1722c74E4930b729931c2557b497",
+      "role": "CometExt",
+      "codeHash": "0x7d3bc53d208534e6265b9b9ef7f85bccc36282167ae9f330e564f6a4c47d6a64"
+    },
+    {
+      "address": "0xa2b2237d46cd974396e7595a837CBc0609F592fd",
+      "role": "ProxyAdmin",
+      "codeHash": "0x79bc965977f3acfd43b3b2f5399fbfbcac9bc897558744b1f15318a298d94a31",
+      "owner": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B"
+    },
+    {
+      "address": "0x2CF2179ff3732bd681eA59b339abF86a57922d3F",
+      "role": "TransparentUpgradeableProxy",
+      "codeHash": "0xdec0861681a105c81ade085fc2a0a093f6d12dbe69225bc4bcc4ae5c8d83e0d8"
+    },
+    {
+      "address": "0xfB6aDDA5F80B88eB8777c616aB7e4c7E09cE1F53",
+      "role": "zkltc implementation",
+      "codeHash": "0x14326db51c7849f09c91c7d7e545cb277ec44933b5a0b39356daf7f76d8cda92"
+    },
+    {
+      "address": "0x9ba261897a12911bfc002508cCD8Ad02d5fCb00a",
+      "role": "zkltc asset list",
+      "codeHash": "0xbe1fc7c2daabee57870f00eaf71c659e833c640471bb9e07e0230a521b1c5a3e"
+    },
+    {
+      "address": "0xb341d9bce2c1cee5ed2cd8b26d0f9eb420272a39",
+      "role": "LithiumUSDT",
+      "codeHash": "0xcba0b03a0cc8f716ccb95393767764b7f2916c9ef51f50334aef4b02a1d3c17e",
+      "owner": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B"
+    },
+    {
+      "address": "0x4f91a950ed73c8B6F28dFE460f9444ed8866894f",
+      "role": "USDC/USD wrapper",
+      "codeHash": "0xb54bdfdb28809f5d78702a1996323f524b7d94bbde114ff20ec47c897032a052",
+      "owner": "0x422b08AfdC7ab8BA91572253EC4faA23757e38C3"
+    },
+    {
+      "address": "0xd7ff0a3dde1fdc2137ff4caade5396f009739645",
+      "role": "USDT/USD wrapper",
+      "codeHash": "0xb54bdfdb28809f5d78702a1996323f524b7d94bbde114ff20ec47c897032a052",
+      "owner": "0x422b08AfdC7ab8BA91572253EC4faA23757e38C3"
+    },
+    {
+      "address": "0x45dDa5d881BD2C917976CCfde74fFd6f6412da29",
+      "role": "LTC/USD wrapper",
+      "codeHash": "0xb54bdfdb28809f5d78702a1996323f524b7d94bbde114ff20ec47c897032a052",
+      "owner": "0x422b08AfdC7ab8BA91572253EC4faA23757e38C3"
+    }
+  ],
+  "markets": [
+    {
+      "id": "usdc",
+      "proxy": "0x9AAF693E76547ab9423D680890F5c8432C4c9619",
+      "implementation": "0xc6c750c1afb7fa17c24e13ebba2ea463f6cb5fd4",
+      "admin": "0x7d82967d84079c84ff69766d566101a20b562dba",
+      "governor": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B",
+      "pauseGuardian": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B",
+      "baseToken": "0xc4361F046d767615ea70b8C65f7740CEB775Bbed",
+      "baseTokenPriceFeed": "0x46F32802cEeB8509CEBEB065E391CBe8D2648e62",
+      "extensionDelegate": "0x34436312A52A0E9d5162391DFB0E8138511d7ff0",
+      "assetList": "0x00f3cE8d1116d53d91e8f90F407Cd88B5f89F388",
+      "collateralToken": "0x0000000000000000000000000000000000000000",
+      "collateralPriceFeed": "0x970fB75b1F2767cA2F95A6F1a42fb9aCd7309653",
+      "supplyCap": "1000000000000000000000",
+      "borrowCollateralFactor": "600000000000000000",
+      "liquidateCollateralFactor": "700000000000000000",
+      "liquidationFactor": "900000000000000000"
+    },
+    {
+      "id": "usdt",
+      "proxy": "0x5AbB1216c61b36518a37Cd6dCC4733bf9aFe3895",
+      "implementation": "0x1694a4832ab52d83abc0a4a63601e97000ede98b",
+      "admin": "0x573a573f2e45cb159358e49e0894bbb56e355765",
+      "governor": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B",
+      "pauseGuardian": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B",
+      "baseToken": "0xb341d9bce2C1Cee5ed2cD8B26d0F9EB420272A39",
+      "baseTokenPriceFeed": "0x6F6770558A874bD53fdBd16899d0DC518003b8ED",
+      "extensionDelegate": "0xb7967Cb26A24E06f20fB35Cc275eC1bA31C5EA2a",
+      "assetList": "0xd2025e707AE68e8a6e744Ac33674B12ad21dE49F",
+      "collateralToken": "0x0000000000000000000000000000000000000000",
+      "collateralPriceFeed": "0x9Dbe30a3b125A2336C62Dd7F484C6CeBCC45170b",
+      "supplyCap": "1000000000000000000000",
+      "borrowCollateralFactor": "600000000000000000",
+      "liquidateCollateralFactor": "700000000000000000",
+      "liquidationFactor": "900000000000000000"
+    },
+    {
+      "id": "zkltc",
+      "proxy": "0x2CF2179ff3732bd681eA59b339abF86a57922d3F",
+      "implementation": "0xfb6adda5f80b88eb8777c616ab7e4c7e09ce1f53",
+      "admin": "0xa2b2237d46cd974396e7595a837cbc0609f592fd",
+      "governor": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B",
+      "pauseGuardian": "0x4f8705F8fb406FA933433EFE409bba16BE5c069B",
+      "baseToken": "0x0000000000000000000000000000000000000000",
+      "baseTokenPriceFeed": "0x9F93D4747063bEA81986B57b7F5ef65Cd7AF7036",
+      "extensionDelegate": "0x6A149DC1718c1722c74E4930b729931c2557b497",
+      "assetList": "0x9ba261897a12911bfc002508cCD8Ad02d5fCb00a",
+      "collateralToken": "0xc4361F046d767615ea70b8C65f7740CEB775Bbed",
+      "collateralPriceFeed": "0xd1813223c7a84C1bA6bB7aCEDA5fa9004e5ecaCd",
+      "supplyCap": "1000000000000",
+      "borrowCollateralFactor": "600000000000000000",
+      "liquidateCollateralFactor": "700000000000000000",
+      "liquidationFactor": "900000000000000000"
+    }
+  ],
+  "oracles": [
+    {
+      "address": "0x4f91a950ed73c8B6F28dFE460f9444ed8866894f",
+      "owner": "0x422b08AfdC7ab8BA91572253EC4faA23757e38C3",
+      "pairKey": "USDC/USD",
+      "diaOracleAddress": "0xE7F65d4bAdcfABc4eA57B8F66bBa044363D89eec",
+      "decimals": 18,
+      "maxStaleness": 3600
+    },
+    {
+      "address": "0xd7ff0a3dde1fdc2137ff4caade5396f009739645",
+      "owner": "0x422b08AfdC7ab8BA91572253EC4faA23757e38C3",
+      "pairKey": "USDT/USD",
+      "diaOracleAddress": "0xE7F65d4bAdcfABc4eA57B8F66bBa044363D89eec",
+      "decimals": 18,
+      "maxStaleness": 3600
+    },
+    {
+      "address": "0x45dDa5d881BD2C917976CCfde74fFd6f6412da29",
+      "owner": "0x422b08AfdC7ab8BA91572253EC4faA23757e38C3",
+      "pairKey": "LTC/USD",
+      "diaOracleAddress": "0xE7F65d4bAdcfABc4eA57B8F66bBa044363D89eec",
+      "decimals": 18,
+      "maxStaleness": 3600
+    }
+  ],
+  "adapters": [
+    {
+      "address": "0x46F32802cEeB8509CEBEB065E391CBe8D2648e62",
+      "source": "0x4f91a950ed73c8B6F28dFE460f9444ed8866894f",
+      "sourceDecimals": 18,
+      "maxStaleness": "3600"
+    },
+    {
+      "address": "0x970fB75b1F2767cA2F95A6F1a42fb9aCd7309653",
+      "source": "0x45dDa5d881BD2C917976CCfde74fFd6f6412da29",
+      "sourceDecimals": 18,
+      "maxStaleness": "3600"
+    },
+    {
+      "address": "0x6F6770558A874bD53fdBd16899d0DC518003b8ED",
+      "source": "0xd7ff0A3DdE1FdC2137Ff4CaAde5396f009739645",
+      "sourceDecimals": 18,
+      "maxStaleness": "3600"
+    },
+    {
+      "address": "0x9Dbe30a3b125A2336C62Dd7F484C6CeBCC45170b",
+      "source": "0x45dDa5d881BD2C917976CCfde74fFd6f6412da29",
+      "sourceDecimals": 18,
+      "maxStaleness": "3600"
+    },
+    {
+      "address": "0x9F93D4747063bEA81986B57b7F5ef65Cd7AF7036",
+      "source": "0x45dDa5d881BD2C917976CCfde74fFd6f6412da29",
+      "sourceDecimals": 18,
+      "maxStaleness": "3600"
+    },
+    {
+      "address": "0xd1813223c7a84C1bA6bB7aCEDA5fa9004e5ecaCd",
+      "source": "0x4f91a950ed73c8B6F28dFE460f9444ed8866894f",
+      "sourceDecimals": 18,
+      "maxStaleness": "3600"
+    }
+  ]
+}
