@@ -20,12 +20,13 @@ if (mode === '--submit') {
     record.before = before;
     if (before.status === 'full') record.status = 'already-full';
     else {
-      const body = new URLSearchParams({ module: 'contract', action: 'verifysourcecode',
+      const body = new FormData();
+      for (const [key, value] of Object.entries({
         contractaddress: entry.address, sourceCode: entry.compilation.sourceCode,
         codeformat: 'solidity-standard-json-input', contractname: entry.contract,
         compilerversion: entry.compilation.compilerVersion, constructorArguments: entry.constructorArgs.slice(2),
-      });
-      const response = await fetch('https://liteforge.explorer.caldera.xyz/api/', { method: 'POST', body, signal: AbortSignal.timeout(30000) });
+      })) body.set(key, value);
+      const response = await fetch('https://liteforge.explorer.caldera.xyz/api?module=contract&action=verifysourcecode', { method: 'POST', body, signal: AbortSignal.timeout(30000) });
       assert(response.ok, `Explorer HTTP ${response.status}`);
       const result = await response.json();
       record.response = result;
