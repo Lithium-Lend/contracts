@@ -29,7 +29,7 @@ jobs:
           git -c url."https://github.com/".insteadOf=git@github.com:
           submodule update --init --recursive --
           lib/comet lib/forge-std lib/openzeppelin-contracts
-      - uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+      - uses: foundry-rs/foundry-toolchain@dba66c27052e63476d886f22216e119ba7e615bf # v1
         with:
           version: v1.8.0
       - name: Check attestation regression tests
@@ -64,7 +64,7 @@ jobs:
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: '24.11.1'
-      - uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+      - uses: foundry-rs/foundry-toolchain@dba66c27052e63476d886f22216e119ba7e615bf # v1
         with:
           version: v1.8.0
       - name: Check live integrity and liquidity
