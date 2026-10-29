@@ -1,0 +1,81 @@
+name: Deployment checks
+
+on:
+  workflow_call:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deployment-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: true
+
+jobs:
+  forks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24.11.1'
+      - name: Initialize dependencies
+        run: >-
+          git -c url."https://github.com/".insteadOf=git@github.com:
+          submodule update --init --recursive --
+          lib/comet lib/forge-std lib/openzeppelin-contracts
+      - uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+        with:
+          version: v1.8.0
+      - name: Check attestation regression tests
+        run: node --test script/test-attestation.mjs
+      - name: Verify reference deployment
+        run: node script/attest-liteforge.mjs --block 65692029 --output attestation/reference.json
+      - name: Build cross-compiler fixtures
+        run: forge build src/testnet/LithiumUSDC.sol src/testnet/LithiumUSDT.sol
+      - name: Run every deployment fork suite explicitly
+        working-directory: comet
+        env:
+          LITHIUM_COMET_FORK: 'true'
+        run: forge test --match-path 'test/*Fork.t.sol' --json > ../attestation/forks.json
+      - name: Reject skipped or missing fork tests
+        run: node script/check-fork-results.mjs attestation/forks.json
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        if: always()
+        with:
+          name: pinned-deployment-tests
+          path: attestation/
+          retention-days: 30
+          if-no-files-found: error
+
+  current-state:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24.11.1'
+      - uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+        with:
+          version: v1.8.0
+      - name: Check live integrity and liquidity
+        run: node script/attest-liteforge.mjs --fail-on-health --output attestation/latest.json
+      - name: Record explorer assurance
+        if: always()
+        run: node script/check-explorer.mjs --output attestation/explorer.json
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        if: always()
+        with:
+          name: current-deployment-state
+          path: attestation/
+          retention-days: 30
+          if-no-files-found: error

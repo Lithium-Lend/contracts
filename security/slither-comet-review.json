@@ -1,0 +1,98 @@
+{
+  "analyzer": "0.11.6",
+  "reviewedAt": "2026-10-29",
+  "analysisInputSha256": "835a2f1806d579c9cb21a04065d814782a413bd36f67fc115c2b96ae9458b360",
+  "accepted": [
+    {
+      "id": "6e653c856f362774ec34fb530e5b4a961582f85c66ecaba8f59d81ed067b9802",
+      "check": "reentrancy-balance",
+      "impact": "High",
+      "location": "Reentrancy in LithiumNativeBaseComet.doTransferOut(address,address,uint256) (src/LithiumNativeBaseComet.sol#748-783):",
+      "reason": "Exact transfer-delta validation with current immutable non-callback tokens and guarded principal-changing paths. See security/README.md, including the accrueAccount limitation."
+    },
+    {
+      "id": "aa72c422dc403305e717dae9201df5c77ebca0fb3fec7e43dbfa26decb86e63d",
+      "check": "reentrancy-balance",
+      "impact": "High",
+      "location": "Reentrancy in LithiumComet.doTransferIn(address,address,uint256) (src/LithiumComet.sol#702-731):",
+      "reason": "Exact transfer-delta validation with current immutable non-callback tokens and guarded principal-changing paths. See security/README.md, including the accrueAccount limitation."
+    },
+    {
+      "id": "d24d152283400b771c9b7ba6999e402600230ae025cc00d72c7df038f85c0ada",
+      "check": "reentrancy-balance",
+      "impact": "High",
+      "location": "Reentrancy in LithiumNativeBaseComet.doTransferOut(address,address,uint256) (src/LithiumNativeBaseComet.sol#748-783):",
+      "reason": "Exact transfer-delta validation with current immutable non-callback tokens and guarded principal-changing paths. See security/README.md, including the accrueAccount limitation."
+    },
+    {
+      "id": "d40d306015c2c5cfba23dc621fbd5061dab3004cac06c179176d5a41bdffd898",
+      "check": "reentrancy-balance",
+      "impact": "High",
+      "location": "Reentrancy in LithiumComet.doTransferOut(address,address,uint256) (src/LithiumComet.sol#737-767):",
+      "reason": "Exact transfer-delta validation with current immutable non-callback tokens and guarded principal-changing paths. See security/README.md, including the accrueAccount limitation."
+    },
+    {
+      "id": "f075af66b310c43dba0fbbf0717be23cb399935f8e20558f727d6e33846f7cc4",
+      "check": "reentrancy-balance",
+      "impact": "High",
+      "location": "Reentrancy in LithiumNativeBaseComet.doTransferIn(address,address,uint256) (src/LithiumNativeBaseComet.sol#711-742):",
+      "reason": "Exact transfer-delta validation with current immutable non-callback tokens and guarded principal-changing paths. See security/README.md, including the accrueAccount limitation."
+    },
+    {
+      "id": "073b8cec3837c417279d8d6334c9e59c48652fb79ee2335586d1513407c96c81",
+      "check": "incorrect-equality",
+      "impact": "Medium",
+      "location": "LithiumNativeBaseComet.doTransferIn(address,address,uint256) (src/LithiumNativeBaseComet.sol#711-742) uses a dangerous strict equality:",
+      "reason": "Exact native-value validation, zero-supply guard, or collateral bitmap accounting boundary; not equality with raw native cash."
+    },
+    {
+      "id": "156310003502ac7e1ed54c835481cf688bdb27c1a7ea4246dbed1990c8da54c8",
+      "check": "incorrect-equality",
+      "impact": "Medium",
+      "location": "LithiumNativeBaseComet.getUtilization() (src/LithiumNativeBaseComet.sol#395-403) uses a dangerous strict equality:",
+      "reason": "Exact native-value validation, zero-supply guard, or collateral bitmap accounting boundary; not equality with raw native cash."
+    },
+    {
+      "id": "21aca43f4069a2a7f9f956fa6bcb29804f50d1d86d8918afc5aae82df779b9fa",
+      "check": "incorrect-equality",
+      "impact": "Medium",
+      "location": "LithiumComet.doTransferIn(address,address,uint256) (src/LithiumComet.sol#702-731) uses a dangerous strict equality:",
+      "reason": "Exact native-value validation, zero-supply guard, or collateral bitmap accounting boundary; not equality with raw native cash."
+    },
+    {
+      "id": "23c6fbb2833dfaed96544061d1877c9b96339a52e982b7c3be7a2b833709e50f",
+      "check": "incorrect-equality",
+      "impact": "Medium",
+      "location": "LithiumComet.getUtilization() (src/LithiumComet.sol#386-394) uses a dangerous strict equality:",
+      "reason": "Exact native-value validation, zero-supply guard, or collateral bitmap accounting boundary; not equality with raw native cash."
+    },
+    {
+      "id": "38df66198278be21df64a3956f73925f300830f64cfbc0a4048d260378adbd32",
+      "check": "incorrect-equality",
+      "impact": "Medium",
+      "location": "LithiumNativeBaseComet.updateAssetsIn(address,CometCore.AssetInfo,uint128,uint128) (src/LithiumNativeBaseComet.sol#652-677) uses a dangerous strict equality:",
+      "reason": "Exact native-value validation, zero-supply guard, or collateral bitmap accounting boundary; not equality with raw native cash."
+    },
+    {
+      "id": "ddffb954199b56dd4d6dd406d37aba7faf65f2215dc74735d95fb4090a2696be",
+      "check": "incorrect-equality",
+      "impact": "Medium",
+      "location": "LithiumComet.updateAssetsIn(address,CometCore.AssetInfo,uint128,uint128) (src/LithiumComet.sol#643-668) uses a dangerous strict equality:",
+      "reason": "Exact native-value validation, zero-supply guard, or collateral bitmap accounting boundary; not equality with raw native cash."
+    },
+    {
+      "id": "0ad01fef179a02c8102031ad7dd6e2a67980c921249f94c10ffbb28553a61687",
+      "check": "unused-return",
+      "impact": "Medium",
+      "location": "LithiumNativeBaseComet.getPrice(address) (src/LithiumNativeBaseComet.sol#410-414) ignores return value by (None,price,None,None,None) = IPriceFeed(priceFeed).latestRoundData() (src/LithiumNativeBaseComet.sol#411)",
+      "reason": "Pinned LithiumCometPriceFeed adapters validate freshness, positivity, and round completeness before markets consume the price."
+    },
+    {
+      "id": "0db2f5ac7da0c70c1b09bc9a46ad119b7774b5201b107e5844c76b56a30f9530",
+      "check": "unused-return",
+      "impact": "Medium",
+      "location": "LithiumComet.getPrice(address) (src/LithiumComet.sol#401-405) ignores return value by (None,price,None,None,None) = IPriceFeed(priceFeed).latestRoundData() (src/LithiumComet.sol#402)",
+      "reason": "Pinned LithiumCometPriceFeed adapters validate freshness, positivity, and round completeness before markets consume the price."
+    }
+  ]
+}

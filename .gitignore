@@ -1,6 +1,7 @@
 /broadcast/
 /cache/
 /out/
+/attestation/
 /comet/broadcast/
 /comet/cache/
 /comet/cache-liteforge/
