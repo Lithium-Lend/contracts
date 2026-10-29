@@ -43,5 +43,22 @@ export function currentVerificationEntries() {
     const [source] = entry.contract.split(':');
     assert(JSON.parse(entry.compilation.sourceCode).sources[source], `Missing source ${source}`);
   }
+  // Preserve every source byte and compiler setting except output selection.
+  // The committed proofs are independently reproduced by the compiler in CI.
+  const proofs = JSON.parse(readFileSync(new URL('../config/current-verification-inputs.json', import.meta.url)));
+  assert.equal(proofs.compilerVersion, additional.compilerVersion);
+  for (const entry of entries) {
+    const proof = proofs.entries.find(p => p.contract === entry.contract);
+    assert(proof, `Missing exact verification proof for ${entry.contract}`);
+    const input = JSON.parse(entry.compilation.sourceCode);
+    input.sources = Object.fromEntries(Object.entries(input.sources).filter(([unit]) => proof.sourceUnits.includes(unit)));
+    assert.equal(Object.keys(input.sources).length, proof.sourceUnits.length, 'Missing required source');
+    const [unit, name] = entry.contract.split(':');
+    input.settings.outputSelection = { [unit]: { [name]: ['abi', 'metadata', 'evm.bytecode.object', 'evm.deployedBytecode.object', 'evm.deployedBytecode.immutableReferences'] } };
+    const reduced = JSON.stringify(input);
+    const digest = createHash('sha256').update(reduced).digest('hex');
+    assert.equal(digest, proof.inputSha256, `Reduced input changed: ${entry.contract}`);
+    entry.compilation = { sourceCode: reduced, inputSha256: digest, deploymentInputSha256: entry.compilation.inputSha256, compilerVersion: additional.compilerVersion };
+  }
   return entries;
 }

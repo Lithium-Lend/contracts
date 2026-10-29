@@ -14,7 +14,7 @@ if (mode === '--submit') {
   assert(entry, 'Address is not in the current supported deployment set');
   const output = resolve(`../attestation/verification-${target.toLowerCase()}.json`);
   mkdirSync(resolve('../attestation'), { recursive: true });
-  const record = { address: entry.address, contract: entry.contract, inputSha256: entry.compilation.inputSha256, checkedAt: new Date().toISOString(), status: 'unconfirmed' };
+  const record = { address: entry.address, contract: entry.contract, inputSha256: entry.compilation.inputSha256, deploymentInputSha256: entry.compilation.deploymentInputSha256, checkedAt: new Date().toISOString(), status: 'unconfirmed' };
   try {
     const before = await inspectVerification(entry);
     record.before = before;

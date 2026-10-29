@@ -69,6 +69,8 @@ jobs:
       - run: node script/verify-current.mjs --check
       - name: Reproduce cap upgrade compiler input
         run: node script/prepare-cap-upgrade-build.mjs "$HOME/.svm/0.8.15/solc-0.8.15" "$RUNNER_TEMP/lithium-cap-build"
+      - name: Reproduce smaller explorer verification inputs
+        run: node script/check-current-verification.mjs "$HOME/.svm/0.8.15/solc-0.8.15" "$RUNNER_TEMP/lithium-cap-build"
       - run: node research/rate-simulation.mjs
       - run: node research/additional-market-simulation.mjs --check
       - name: Check additional market compiler inputs

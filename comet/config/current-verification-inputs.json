@@ -1,0 +1,158 @@
+{
+  "compilerVersion": "v0.8.15+commit.e14f2714",
+  "sourceContentsUnchanged": true,
+  "entries": [
+    {
+      "contract": "../lib/comet/contracts/CometExt.sol:CometExt",
+      "sourceUnits": [
+        "../lib/comet/contracts/CometConfiguration.sol",
+        "../lib/comet/contracts/CometCore.sol",
+        "../lib/comet/contracts/CometExt.sol",
+        "../lib/comet/contracts/CometExtInterface.sol",
+        "../lib/comet/contracts/CometMath.sol",
+        "../lib/comet/contracts/CometStorage.sol"
+      ],
+      "inputSha256": "fd80f2d1542adf3be5bdc5cd0b6db3b9928140e2aa2c98251250dd7a485be66c",
+      "creationSha256": "9ec3110cd9cb18841bb8f29a4a446d5726c4581bc541dac18c826c883a6dad21",
+      "runtimeSha256": "38723790612fccd4c24a659502a07bd760fa6955fd3c984c0018ad7f3829ad8a",
+      "metadataSha256": "5df58db38272002c35430bf9a4c5dfc0973a75c05a44f3a4d9efe5efea118a90"
+    },
+    {
+      "contract": "../lib/comet/contracts/vendor/proxy/transparent/ProxyAdmin.sol:ProxyAdmin",
+      "sourceUnits": [
+        "../lib/comet/contracts/vendor/proxy/transparent/ProxyAdmin.sol",
+        "../lib/comet/contracts/vendor/proxy/transparent/TransparentUpgradeableProxy.sol",
+        "../lib/comet/contracts/vendor/access/Ownable.sol",
+        "../lib/comet/contracts/vendor/interfaces/draft-IERC1822.sol",
+        "../lib/comet/contracts/vendor/proxy/ERC1967/ERC1967Proxy.sol",
+        "../lib/comet/contracts/vendor/proxy/ERC1967/ERC1967Upgrade.sol",
+        "../lib/comet/contracts/vendor/proxy/Proxy.sol",
+        "../lib/comet/contracts/vendor/proxy/beacon/IBeacon.sol",
+        "../lib/comet/contracts/vendor/utils/Address.sol",
+        "../lib/comet/contracts/vendor/utils/Context.sol",
+        "../lib/comet/contracts/vendor/utils/StorageSlot.sol"
+      ],
+      "inputSha256": "62cacd574cbd78484914e0691e701fde646377bd7eb09a594c887bdafb6ff3bd",
+      "creationSha256": "6aad501f2db845f99c2ad7f2d2a250a558c549f08c9284cfa126950ccd709dc9",
+      "runtimeSha256": "174a7ce85de3ef4159808e0ee0fbd4afddf5991e0c14d2051f5a44f9a681cfcc",
+      "metadataSha256": "792de165612da63ce9a89761937cd81734e986b767d91ee1db46c6e6916626f8"
+    },
+    {
+      "contract": "../lib/comet/contracts/vendor/proxy/transparent/TransparentUpgradeableProxy.sol:TransparentUpgradeableProxy",
+      "sourceUnits": [
+        "../lib/comet/contracts/vendor/proxy/transparent/TransparentUpgradeableProxy.sol",
+        "../lib/comet/contracts/vendor/interfaces/draft-IERC1822.sol",
+        "../lib/comet/contracts/vendor/proxy/ERC1967/ERC1967Proxy.sol",
+        "../lib/comet/contracts/vendor/proxy/ERC1967/ERC1967Upgrade.sol",
+        "../lib/comet/contracts/vendor/proxy/Proxy.sol",
+        "../lib/comet/contracts/vendor/proxy/beacon/IBeacon.sol",
+        "../lib/comet/contracts/vendor/utils/Address.sol",
+        "../lib/comet/contracts/vendor/utils/StorageSlot.sol"
+      ],
+      "inputSha256": "0348f1d2dbdc6adc2eb23672cf46d8fdfaea6398ac77ab4712cceded63fd28f8",
+      "creationSha256": "8e2bfd3f270ce342cb5493031dcdb01f0bf84b355c1268a4ac84ec9be1528a74",
+      "runtimeSha256": "23528660e8579e407bb0361ba82ec37d99de18df82f8cb631a338dc0db5ba497",
+      "metadataSha256": "0c009607e810fbc92e4242d134ed739e2399f140d0175ca8a48b8683eb0e2e60"
+    },
+    {
+      "contract": "src/LithiumComet.sol:LithiumComet",
+      "sourceUnits": [
+        "../lib/comet/contracts/CometConfiguration.sol",
+        "../lib/comet/contracts/CometCore.sol",
+        "../lib/comet/contracts/CometMainInterface.sol",
+        "../lib/comet/contracts/interfaces/IAssetList.sol",
+        "../lib/comet/contracts/interfaces/IERC20NonStandard.sol",
+        "../lib/comet/contracts/interfaces/IPriceFeed.sol",
+        "src/LithiumComet.sol",
+        "src/LithiumNativeAssetList.sol",
+        "../lib/comet/contracts/CometMath.sol",
+        "../lib/comet/contracts/CometStorage.sol"
+      ],
+      "inputSha256": "b19772a81f0dcdd6ee6fbd743089cf884500a035f36bbb9cc7d9c53edd202f48",
+      "creationSha256": "7736ac9fa5b681ffc7f310ee4119e6e82ae1f161553d6ee6fd4f88541fb8b291",
+      "runtimeSha256": "dd2de567137bf3e86502f98896dfa9ed6aeb16f160eeb77d0060fb43f6a87681",
+      "metadataSha256": "60790c77bf9f0c937529addcde2d9e9a909c41cc608a22ffc15864fc11800849"
+    },
+    {
+      "contract": "src/LithiumCometPriceFeed.sol:LithiumCometPriceFeed",
+      "sourceUnits": [
+        "../lib/comet/contracts/interfaces/IPriceFeed.sol",
+        "src/LithiumCometPriceFeed.sol"
+      ],
+      "inputSha256": "ea0fccc24346a18185924b45829e6ae9a91307f27accfaecb63911cdb4040413",
+      "creationSha256": "3eb4f13a836777d7974e62bcbc455ad882865183babdfdf91b41bb7252340b6d",
+      "runtimeSha256": "d2f552d602237e9cad90f34604907b603a67b0af3661c8c220f2156a60846ba4",
+      "metadataSha256": "994fadd3b1a1036c05bd599304c643d433fd7614cd1d0101118e7ff11d6b3ec2"
+    },
+    {
+      "contract": "src/LithiumErc20AssetList.sol:LithiumErc20AssetList",
+      "sourceUnits": [
+        "../lib/comet/contracts/CometConfiguration.sol",
+        "../lib/comet/contracts/CometCore.sol",
+        "../lib/comet/contracts/interfaces/IERC20NonStandard.sol",
+        "../lib/comet/contracts/interfaces/IPriceFeed.sol",
+        "src/LithiumErc20AssetList.sol",
+        "../lib/comet/contracts/CometMath.sol",
+        "../lib/comet/contracts/CometStorage.sol"
+      ],
+      "inputSha256": "40db469ce8bd42ed92b71b2deeb58b7aa4de8cc029a153f03e4392ff3c506ac1",
+      "creationSha256": "cfd382aa1c8957b660b507b756174b8a1b32a619929b7dcc8ed6d9fc6c37457b",
+      "runtimeSha256": "6a44bfbe54d5e69dfbc52526f765e212fbb8cd3df637692a3a15d376faeff484",
+      "metadataSha256": "35272c82c7820f960a6bc5dd3150af863a5026a5ab40ce168a433e5183ec53a2"
+    },
+    {
+      "contract": "src/LithiumNativeAssetList.sol:LithiumNativeAssetList",
+      "sourceUnits": [
+        "../lib/comet/contracts/CometConfiguration.sol",
+        "../lib/comet/contracts/CometCore.sol",
+        "../lib/comet/contracts/interfaces/IPriceFeed.sol",
+        "src/LithiumNativeAssetList.sol",
+        "../lib/comet/contracts/CometMath.sol",
+        "../lib/comet/contracts/CometStorage.sol"
+      ],
+      "inputSha256": "4d5db59962022e2cf83e377ece20044a402cce71964a6c77e65ceacc0390d65b",
+      "creationSha256": "259c4e438a9255726c21615468c4b26fbf28941cff0f01cc1a18ffb4271371ee",
+      "runtimeSha256": "7318273b3b65be3e169190e2cb3ca2e43de2ab973d7bf71da3c174d1a9c75063",
+      "metadataSha256": "fac1db9a994a1ef8ae2cc1509e6232c8e7c2fac13443d32f93ff2f7c636fe8bf"
+    },
+    {
+      "contract": "src/LithiumNativeBaseComet.sol:LithiumNativeBaseComet",
+      "sourceUnits": [
+        "../lib/comet/contracts/CometConfiguration.sol",
+        "../lib/comet/contracts/CometCore.sol",
+        "../lib/comet/contracts/CometMainInterface.sol",
+        "../lib/comet/contracts/interfaces/IAssetList.sol",
+        "../lib/comet/contracts/interfaces/IERC20NonStandard.sol",
+        "../lib/comet/contracts/interfaces/IPriceFeed.sol",
+        "src/LithiumErc20AssetList.sol",
+        "src/LithiumNativeBaseComet.sol",
+        "../lib/comet/contracts/CometMath.sol",
+        "../lib/comet/contracts/CometStorage.sol"
+      ],
+      "inputSha256": "511ac4e43097f26d823e1fd743743a5c758a7e76f8cd6422de274b8c2ea94b54",
+      "creationSha256": "0a45e646d1a87683a73e2b9a759effff8defa1c3e5be1a265db89fd239a1ffdb",
+      "runtimeSha256": "9f808c2c3dd252d2fc38fd417039b583a2fa0846b5fb29a2f2d1354287efda67",
+      "metadataSha256": "71f29f53a3a7ad1b9d1377ea334bb85ee77cd992c1227437bce5d17f3b40c038"
+    },
+    {
+      "contract": "src/LithiumUSDTComet.sol:LithiumUSDTComet",
+      "sourceUnits": [
+        "../lib/comet/contracts/CometConfiguration.sol",
+        "../lib/comet/contracts/CometCore.sol",
+        "../lib/comet/contracts/CometMainInterface.sol",
+        "../lib/comet/contracts/interfaces/IAssetList.sol",
+        "../lib/comet/contracts/interfaces/IERC20NonStandard.sol",
+        "../lib/comet/contracts/interfaces/IPriceFeed.sol",
+        "src/LithiumComet.sol",
+        "src/LithiumNativeAssetList.sol",
+        "src/LithiumUSDTComet.sol",
+        "../lib/comet/contracts/CometMath.sol",
+        "../lib/comet/contracts/CometStorage.sol"
+      ],
+      "inputSha256": "ba1c8777e9c2c94b0a06835b018bd0d00ad73f643495d56b271727f466e4cacd",
+      "creationSha256": "7a44010a5bd2af4e1e50f0c32121d87ad9aeca92855dcb82a5e1fadfea61ba0d",
+      "runtimeSha256": "1258c85a25aa8f3381198e7de3f7cda35e82270b2f3b01ddd33d38cfd62e8d37",
+      "metadataSha256": "043bce3f8cd8ebb49e9ce6343c67ebeb8bd156366e4caaeb64ef841e5a0fabe5"
+    }
+  ]
+}

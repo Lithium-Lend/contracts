@@ -1,0 +1,42 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { createHash } from 'node:crypto';
+import { spawnSync } from 'node:child_process';
+import { currentVerificationEntries } from './current-verification-input.mjs';
+
+const [compiler, buildDirectory] = process.argv.slice(2);
+assert(compiler && buildDirectory, 'Use <solc-0.8.15> <reproduced-cap-build-directory>');
+const sha = value => createHash('sha256').update(value).digest('hex');
+const version = spawnSync(compiler, ['--version'], { encoding: 'utf8', windowsHide: true });
+assert.equal(version.status, 0);
+assert.match(version.stdout, /Version: 0\.8\.15\+commit\.e14f2714(?:\.|\s|$)/);
+const recorded = JSON.parse(readFileSync(new URL('../deployments/liteforge-cap-upgrade-build.json', import.meta.url)));
+const input = readFileSync(resolve(buildDirectory, 'input.json'));
+assert.equal(sha(input), recorded.inputSha256, 'Unrecognized reference build input');
+const build = JSON.parse(readFileSync(resolve(buildDirectory, 'build.json')));
+assert.equal(build.inputSha256, recorded.inputSha256);
+assert.deepEqual(build.checks, recorded.checks, 'Reference build was not reproduced');
+const outputBytes = readFileSync(resolve(buildDirectory, 'output.json'));
+assert.equal(sha(outputBytes), build.outputSha256, 'Reference build output changed');
+const full = JSON.parse(outputBytes);
+const proofs = JSON.parse(readFileSync(new URL('../config/current-verification-inputs.json', import.meta.url)));
+const entries = [...new Map(currentVerificationEntries().map(e => [e.contract, e])).values()];
+for (const entry of entries) {
+  const [source, name] = entry.contract.split(':');
+  const baseline = full.contracts[source][name];
+  const result = spawnSync(compiler, ['--standard-json'], { input: entry.compilation.sourceCode, encoding: 'utf8', windowsHide: true, timeout: 180000, maxBuffer: 30 * 1024 * 1024 });
+  assert.equal(result.status, 0, `Compilation failed: ${entry.contract}`);
+  const compiled = JSON.parse(result.stdout);
+  assert.equal(compiled.errors?.filter(e => e.severity === 'error').length ?? 0, 0);
+  const artifact = compiled.contracts[source][name];
+  const proof = proofs.entries.find(p => p.contract === entry.contract);
+  assert.equal(artifact.evm.bytecode.object, baseline.evm.bytecode.object, `Creation code differs: ${entry.contract}`);
+  assert.equal(artifact.evm.deployedBytecode.object, baseline.evm.deployedBytecode.object, `Runtime differs: ${entry.contract}`);
+  assert.equal(artifact.metadata, baseline.metadata, `Metadata differs: ${entry.contract}`);
+  assert.equal(sha(Buffer.from(artifact.evm.bytecode.object, 'hex')), proof.creationSha256);
+  assert.equal(sha(Buffer.from(artifact.evm.deployedBytecode.object, 'hex')), proof.runtimeSha256);
+  assert.equal(sha(artifact.metadata), proof.metadataSha256);
+  console.log(`${entry.contract}: exact creation bytecode, runtime, and metadata (${proof.sourceUnits.length} sources).`);
+}
+assert.equal(entries.length, proofs.entries.length, 'Unused or missing proof');
