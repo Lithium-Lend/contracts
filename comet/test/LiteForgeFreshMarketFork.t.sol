@@ -20,7 +20,7 @@ contract LiteForgeFreshMarketForkTest is Test {
             vm.skip(true);
             return;
         }
-        vm.createSelectFork("litvm_liteforge", 56212280);
+        vm.createSelectFork(vm.envOr("LITEFORGE_RPC_URL", string("litvm_liteforge")), 56212280);
         vm.setEvmVersion("prague");
         assertEq(block.chainid, 4441);
         string memory record = vm.readFile("deployments/liteforge-lith-usdc.json");
