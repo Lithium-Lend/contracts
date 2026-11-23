@@ -49,7 +49,10 @@ contract LiteForgeCometForkTest is Test {
             vm.skip(true);
             return;
         }
-        vm.createSelectFork("litvm_liteforge", vm.envOr("LITHIUM_COMET_FORK_BLOCK", uint256(50866808)));
+        vm.createSelectFork(
+            vm.envOr("LITEFORGE_RPC_URL", string("litvm_liteforge")),
+            vm.envOr("LITHIUM_COMET_FORK_BLOCK", uint256(50866808))
+        );
         // The deployed DIA receiver uses newer opcodes. This changes local
         // execution only; the Comet compiler target remains London.
         vm.setEvmVersion("prague");

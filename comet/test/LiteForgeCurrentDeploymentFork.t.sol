@@ -35,7 +35,7 @@ contract LiteForgeCurrentDeploymentForkTest is Test {
         }
         baseline = vm.readFile("config/liteforge-attestation.json");
         vm.createSelectFork(
-            vm.envOr("LITEFORGE_RPC_URL", string("https://liteforge.rpc.caldera.xyz/http")),
+            vm.envOr("LITEFORGE_RPC_URL", string("litvm_liteforge")),
             vm.parseJsonUint(baseline, ".referenceBlock.number")
         );
         vm.setEvmVersion("prague");

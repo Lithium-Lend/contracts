@@ -29,7 +29,7 @@ fail_on_revert = true
 line_length = 120
 
 [rpc_endpoints]
-litvm_liteforge = "https://liteforge.rpc.caldera.xyz/http"
+litvm_liteforge = "https://rpc.testnet.liteforge.zeeve.net/"
 
 # The RPC-side deployment simulation must execute newer token/feed opcodes.
 # Compile every artifact with the original London settings, independently.

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "chainId": 4441,
-  "rpcUrl": "https://liteforge.rpc.caldera.xyz/http",
+  "rpcUrl": "https://rpc.testnet.liteforge.zeeve.net/",
   "referenceBlock": {
     "number": 65692029,
     "hash": "0xac41515e4df58dbcee2b52f0e7b91971f7be34b756a26925a612005d40fbffd9"
