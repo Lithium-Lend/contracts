@@ -128,8 +128,6 @@ jobs:
 
   deployment:
     uses: ./.github/workflows/deployment.yml
-    secrets:
-      LITEFORGE_ARCHIVE_RPC_URL: ${{ secrets.LITEFORGE_ARCHIVE_RPC_URL }}
 
   validate:
     if: always()

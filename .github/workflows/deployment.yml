@@ -2,12 +2,14 @@ name: Deployment checks
 
 on:
   workflow_call:
-    secrets:
-      LITEFORGE_ARCHIVE_RPC_URL:
-        required: false
   schedule:
     - cron: '17 */6 * * *'
   workflow_dispatch:
+    inputs:
+      historical:
+        description: Replay the original deployment blocks
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -37,29 +39,37 @@ jobs:
           version: v1.8.0
       - name: Check attestation regression tests
         run: node --test script/test-attestation.mjs
-      - name: Exercise the deployed bridged USDC reserve
+      - name: Verify current LiteForge contracts
+        run: node script/attest-liteforge.mjs --output attestation/live.json
+      - name: Exercise both deployed USDC reserves
         working-directory: comet
         env:
           RUN_VIA_USDC_FORK: 'true'
-        run: forge test --match-contract ViaUSDCMarketForkTest
+        run: forge test --match-contract ViaUSDCMarketForkTest --json > ../attestation/usdc-forks.json
+      - name: Require both live USDC fork tests
+        run: node script/check-fork-results.mjs attestation/usdc-forks.json --live-usdc
       - name: Verify reference deployment
+        if: github.event_name == 'workflow_dispatch' && inputs.historical
         env:
           LITEFORGE_RPC_URL: ${{ secrets.LITEFORGE_ARCHIVE_RPC_URL || vars.LITEFORGE_ARCHIVE_RPC_URL || 'https://rpc.testnet.liteforge.zeeve.net/' }}
         run: node script/attest-liteforge.mjs --block 65692029 --output attestation/reference.json
       - name: Build cross-compiler fixtures
+        if: github.event_name == 'workflow_dispatch' && inputs.historical
         run: forge build src/testnet/LithiumUSDC.sol src/testnet/LithiumUSDT.sol
       - name: Run every deployment fork suite explicitly
+        if: github.event_name == 'workflow_dispatch' && inputs.historical
         working-directory: comet
         env:
           LITHIUM_COMET_FORK: 'true'
           LITEFORGE_RPC_URL: ${{ secrets.LITEFORGE_ARCHIVE_RPC_URL || vars.LITEFORGE_ARCHIVE_RPC_URL || 'https://rpc.testnet.liteforge.zeeve.net/' }}
         run: forge test --match-path 'test/*Fork.t.sol' --json > ../attestation/forks.json
       - name: Reject skipped or missing fork tests
+        if: github.event_name == 'workflow_dispatch' && inputs.historical
         run: node script/check-fork-results.mjs attestation/forks.json
       - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         if: always()
         with:
-          name: pinned-deployment-tests
+          name: deployment-tests
           path: attestation/
           retention-days: 30
           if-no-files-found: error

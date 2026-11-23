@@ -2,7 +2,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 const results = JSON.parse(readFileSync(process.argv[2], 'utf8'));
-const required = {
+const mode = process.argv[3];
+assert(mode === undefined || mode === '--live-usdc', 'Unknown fork result mode');
+const required = mode === '--live-usdc' ? { ViaUSDCMarketForkTest: 2 } : {
   LiteForgeCometForkTest: 8,
   LiteForgeFreshMarketForkTest: 8,
   LiteForgeCurrentDeploymentForkTest: 2,

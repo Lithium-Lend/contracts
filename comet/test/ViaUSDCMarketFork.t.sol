@@ -15,7 +15,7 @@ contract ViaUSDCMarketForkTest is Test {
     address constant LEGACY_TOKEN = 0xc4361F046d767615ea70b8C65f7740CEB775Bbed;
     address constant MARKET = 0x3e05d1d899625A92c4F177214BD6c25f653f4d93;
 
-    function testSupplyAndBorrowViaUSDCOnFork() external {
+    function setUp() public {
         if (!vm.envOr("RUN_VIA_USDC_FORK", false)) {
             vm.skip(true);
             return;
@@ -23,6 +23,27 @@ contract ViaUSDCMarketForkTest is Test {
         vm.createSelectFork(vm.envOr("VIA_USDC_FORK_RPC", string("https://rpc.testnet.liteforge.zeeve.net/")));
         vm.setEvmVersion("prague");
         assertEq(block.chainid, 4441);
+    }
+
+    function testOriginalUSDCMarketRemainsOpen() external {
+        LithiumComet market = LithiumComet(payable(LEGACY));
+        assertEq(market.baseToken(), LEGACY_TOKEN);
+        assertFalse(market.isSupplyPaused());
+        assertFalse(market.isWithdrawPaused());
+        uint256 amount = 1_000_000;
+        address user = makeAddr("original-usdc-lender");
+        deal(LEGACY_TOKEN, user, amount);
+        vm.startPrank(user);
+        assertTrue(IBridgedUSDC(LEGACY_TOKEN).approve(LEGACY, amount));
+        market.supply(LEGACY_TOKEN, amount);
+        assertApproxEqAbs(market.balanceOf(user), amount, 1);
+        market.withdraw(LEGACY_TOKEN, type(uint256).max);
+        vm.stopPrank();
+        assertApproxEqAbs(IBridgedUSDC(LEGACY_TOKEN).balanceOf(user), amount, 1);
+        assertEq(market.balanceOf(user), 0);
+    }
+
+    function testSupplyAndBorrowViaUSDCOnFork() external {
         LithiumComet oldMarket = LithiumComet(payable(LEGACY));
         uint256 oldSupply = oldMarket.totalSupply();
         uint256 oldDebt = oldMarket.totalBorrow();
