@@ -23,7 +23,7 @@ jobs:
           persist-credentials: false
       - name: Initialize token dependencies
         run: git submodule update --init --recursive -- lib/forge-std lib/openzeppelin-contracts
-      - uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+      - uses: foundry-rs/foundry-toolchain@dba66c27052e63476d886f22216e119ba7e615bf # v1
         with:
           version: v1.8.0
       - run: forge fmt --check
@@ -48,7 +48,7 @@ jobs:
           git -c url."https://github.com/".insteadOf=git@github.com:
           submodule update --init --recursive --
           lib/comet lib/forge-std lib/openzeppelin-contracts
-      - uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+      - uses: foundry-rs/foundry-toolchain@dba66c27052e63476d886f22216e119ba7e615bf # v1
         with:
           version: v1.8.0
       - name: Verify Comet dependency pin
@@ -101,7 +101,7 @@ jobs:
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.14.0'
-      - uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+      - uses: foundry-rs/foundry-toolchain@dba66c27052e63476d886f22216e119ba7e615bf # v1
         with:
           version: v1.8.0
       - name: Initialize dependencies
