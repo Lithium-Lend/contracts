@@ -30,6 +30,8 @@ jobs:
       - run: forge build --sizes
       # Deployment tests mutate the same process environment variables.
       - run: forge test -vvv --threads 1
+      - run: forge fmt --root vaults --check
+      - run: forge test --root vaults -vvv
 
   comet:
     runs-on: ubuntu-24.04
